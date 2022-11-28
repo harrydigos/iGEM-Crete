@@ -1,0 +1,291 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Safety">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Overview", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Lab Safety Measures", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Living organisms and Parts", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Project risks", id: "part4" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Managing risks", id: "part5" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Future applications", id: "part6" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Useful links", id: "part7" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Safety">Safety</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Overview</h1>
+          <p>
+            One of the things we value and care about the most in our team is
+            the safety of our team members and our community, throughout the
+            entirety of our experimental procedures. As a result, we made it a
+            priority from the start to find a secure workspace that adhered to
+            E.U. safety measures and guidelines and to ensure thorough safety
+            training for all of our members. In addition, we aimed to include
+            non-pathogenic organisms in our project to reduce the risk of
+            hazardous exposure to the team and the environment.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Lab Safety Measures</h1>
+          <div class="img-grid">
+            <img
+              class="img-style"
+              width="30%"
+              src={`${ASSETS_URL}/images/safety/lab-img3.png`}
+            />
+            <img
+              class="img-style"
+              width="30%"
+              src={`${ASSETS_URL}/images/safety/lab-img1.png`}
+            />
+            <img
+              class="img-style"
+              width="30%"
+              src={`${ASSETS_URL}/images/safety/lab-img2.png`}
+            />
+          </div>
+          <p>
+            Our working environment is a standard microbiological lab and is
+            classified as biosafety level 1 (BSL-1). For the conduction of the
+            experiments, we used open bench areas, a specialized greenhouse,
+            chemical fume cabinets for dangerous chemicals, and a laminar flow
+            cabinet to prevent contamination of our microbiological cultures.
+            Our project does not involve any prohibited activities, and all of
+            the organisms and parts used are on the competition's White List,
+            according to iGEM regulations.
+          </p>
+        </div>
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Living organisms and Parts</h1>
+          <p>
+            Our project involves the creation of a novel diagnostic tool
+            utilizing Leucine Rich Repeats(LRRs) for the diagnosis of plant
+            pathogen viruses of the genus tospovirus before symptoms appear. We
+            used an iGEM part, OmpA BBa_K1489002, to surface display the LRR and
+            NB-LRR domains of Sw-5b resistance gene of <em
+              ><strong>Solanum peruvianum</strong>
+            </em> on <em><strong> E. coli</strong></em> DH10B cells. A small region
+            of the movement protein of TSWV (Nsm<sup>115-135</sup>) is required for NLR recognition.
+            The movement protein normally contributes to pathogenicity, but in absence
+            of other viral proteins and viral genome, there is no danger of infection
+            and transmission. The movement protein was C-terminally fused with YFP
+            to be traceable when bound to the surface-displayed binder.
+          </p>
+          <p>
+            As part of our experimental procedures, we used living
+            microorganisms, such as <em><strong>E. coli</strong></em> DH10B and <em
+              ><strong>tumefaciens</strong>
+            </em> C58C1 cultures, to express and multiply our vectors. We also agro-infiltrated
+            two plant species, <em><strong>N. Benthamiana</strong></em> and <em
+              ><strong>N. Sylvestris</strong>
+            </em> to ensure the success of our experiments.
+          </p>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Project risks</h1>
+          <p>
+            Mutagens, highly flammable chemicals, and other hazardous chemicals
+            are used in our project such as Ethidium Bromide and Absolute
+            Ethanol. Using such substances may potentially lead to human health
+            risks if mistreated, yet by following the safety protocols to the
+            letter, this danger is nullified. Furthermore, UV light could be
+            mutagenic, thus protective gear was used and exposure was minimized.
+            Ethidium Bromide was used exclusively in a laminar airflow cabinet
+            as it is volatile and was handled with special gloves. Sterile
+            conditions were established by careful use of flame. Also, none of
+            the chemicals were inhaled or ingested on purpose.
+          </p>
+        </div>
+        <div id="part5" class="part scroll">
+          <h1 class="part-title">Managing risks</h1>
+          <p>
+            University faculty including professors and post-doctoral
+            researchers as well as the Bioethics Board of our institution were
+            advising us along our experimental endeavors and eliminated the
+            risks, while also ensuring the smooth conduction of the protocols.
+            In addition, safer practices were proposed by our PIs in order to
+            avoid any misfortunate incidents, such as the usage of laminar flow
+            instead of the flame for sterile conditions.
+          </p>
+          <p>
+            On our part, we received safety and security training from
+            specialized staff to avoid any dangerous mishandling of the
+            laboratory equipment and reagents. We were informed, among others,
+            about lab access and rules, differences between biosafety levels,
+            biosafety equipment, good microbial technique, disinfection and
+            sterilization, emergency procedures, rules for transporting samples
+            between labs or shipping between institutions, chemical, fire, and
+            electrical safety.
+          </p>
+          <p>
+            We decided against using entire living plant pathogens as the risks
+            involved would be disproportional to the anticipated rate of
+            amelioration of our Project.
+          </p>
+          <p>
+            Our institution, as well as the host lab, have taken all the
+            necessary measures to satisfy the guidelines set by the E.U (GLP
+            Good Laboratory Practice OECD), the Greek government, the Ministry
+            of Research, and the host institutions(University of Crete and
+            Foundation for Research and Technology).
+          </p>
+          <p>
+            Those guidelines include but are not limited to, special training
+            provided to all team members regardless if they will perform lab
+            work or not, a thorough explanation of the usage guidelines of all
+            lab equipment as well as meetings aimed at clarifying any "dark
+            spots" in the protocols that will be followed. Moreover, a line of
+            communication has been established with the Biosafety and Bioethics
+            Boards of our institution, if need be.
+          </p>
+        </div>
+        <div id="part6" class="subpart scroll">
+          <h1 class="part-title">Future applications</h1>
+          <p>
+            In the case that our LRR-based diagnostic tool is fully developed
+            and available for usage, it could be beneficial in an industrial
+            environment, in agricultural facilities, but also a form of a
+            consumer product or a small enclosed device as a rapid test,
+            bio-sensing strip with cells that detect tospoviruses.
+          </p>
+          <p>
+            If LRR-based diagnostic tools prove to be equal to or better than
+            existing ones utilizing antibodies, the limits are endless when it
+            comes to potential targets that can be diagnosed both in plants and
+            in animals.
+          </p>
+          <p>
+            The diagnostic tool could be used in agriculture, ergo in the field.
+            In that case, a sample would be isolated from a plant and the test
+            would take place on the spot. For that, specific forms need to be
+            filled in with our institutions according to the standards set by
+            the Greek government, to use a product of synthetic biology.
+          </p>
+          <p>
+            Although there could be a risk of harm to agricultural animals,
+            crops, or domesticated animals and the environment, including wild
+            plants and animals, our team did not identify any bad outcomes for
+            future uses.
+          </p>
+          <p>
+            Our final product (diagnostic tool) does not involve any engineered
+            organisms, thus no risk of spreading, while the creation of certain
+            substances in the laboratory may involve engineered organisms. The
+            latter though will take place in a highly controlled environment.
+          </p>
+        </div>
+        <div id="part7" class="subpart scroll">
+          <h1 class="part-title">Useful links</h1>
+          <p>
+            <strong
+              ><a
+                class="link"
+                href="https://proto.ufsc.br/files/2012/03/glp_trainee_green.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                GLP Trainee Green
+              </a>
+            </strong>
+          </p>
+          <p>
+            <strong
+              ><a
+                class="link"
+                href="https://www.biology.uoc.gr/sites/default/files/field/files/GENERAL%20RULES%20FOR%20SAFE%20LAB%20PRACTICE.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                General Rules For Safe Lab Practice
+              </a>
+            </strong>
+          </p>
+          <p>
+            <strong
+              ><a
+                class="link"
+                href="https://responsibility.igem.org/guidance/white-list"
+                target="_blank"
+                rel="noopener">White List</a
+              >
+            </strong>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  .img-grid {
+    display: flex;
+    gap: 1em;
+  }
+  strong {
+    color: var(--blue-color);
+  }
+  .img-grid img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 30%;
+  }
+  .img-style {
+    border-radius: 10px;
+  }
+
+  @media (max-width: 576px) {
+    .img-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-grid img {
+      width: 50%;
+    }
+  }
+</style>

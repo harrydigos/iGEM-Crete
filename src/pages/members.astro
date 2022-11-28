@@ -1,0 +1,421 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import MemberCard from "../components/MemberCard.astro";
+import { TeamMembers } from "../../static/utils/TeamMembers";
+import { ASSETS_URL } from "../../static/utils/constants";
+import CTATeam from "../components/CTAButtons/CTATeam.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Team">
+  <Navbar activeNav="team" />
+  <div class="hero-team-img"></div>
+  <div class="container">
+    <div class="team-hero">
+      <div>
+        <div class="small-title">about us</div>
+        <div class="hero-title">
+          Meet The <span class="hand-drawn-line">Team</span> Behind iGEM <span
+            style="color: var(--tomato-red-color)">Crete</span
+          >
+        </div>
+      </div>
+      <CTATeam
+        text="Follow On Social"
+        links={{
+          instagram: "https://www.instagram.com/igemcrete/",
+          facebook: "https://www.facebook.com/igemcrete",
+          linkedin: "https://www.linkedin.com/company/igem-crete/",
+        }}
+        bgColor="var(--coral-red-color)"
+        textColor="#ffffff"
+      />
+    </div>
+  </div>
+
+  <section class="container">
+    <div class="team-members-text">
+      <div class="title-caps">team members</div>
+      <div class="team-members-text-content">
+        We are a diverse group of students from the University of Crete, from
+        different backgrounds, with different interests and skills, but we all
+        share the same goal, to create a better world.
+      </div>
+    </div>
+    <div class="team-grid">
+      {
+        TeamMembers.map((member) => (
+          <MemberCard
+            client:visible
+            field={member.field}
+            fname={member.fname}
+            lname={member.lname}
+            info={member.info}
+            linkedIn={member.linkedIn}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="full-container supervisors-section">
+    <div class="container">
+      <div class="supervisors-text">
+        <div class="title-caps">supervisors</div>
+        <div class="supervisors-text-content">
+          We are grateful to our supervisors for their guidance and support.
+        </div>
+      </div>
+      <div class="supervisors-grid">
+        <div class="supervisors-card">
+          <img
+            class="supervisor-img"
+            src={`${ASSETS_URL}/images/supervisors/panagiotissarris.jpg`}
+          />
+          <div class="supervisor">
+            <div class="supervisor-name">Panagiotis F. Sarris</div>
+            <div class="supervisor-sentence">Professor</div>
+            <div class="supervisor-description">
+              Professor Panagiotis Sarris received his BSc in Molecular Biology
+              and Biomedicine from the State University of "St. Kliment
+              Ohridski" in Sofia (1999). His 1st MSc was awarded from the
+              Bulgarian Academy of Sciences in the field of "Clinical Chemistry
+              and Microbiology" (2000).
+            </div>
+            <a
+              class="read-more"
+              href="https://www.biology.uoc.gr/en/personnel/7807"
+              target="_blank"
+            >
+              <p>Read more</p>
+              <i class="ph-arrow-square-out-bold"></i>
+            </a>
+          </div>
+        </div>
+        <div class="supervisors-card">
+          <img
+            class="supervisor-img"
+            src={`${ASSETS_URL}/images/supervisors/annamitraki.jpg`}
+          />
+          <div class="supervisor">
+            <div class="supervisor-name">Anna Mitraki</div>
+            <div class="supervisor-sentence">Professor</div>
+            <div class="supervisor-description">
+              A chemist and biochemist by training, I have been working for more
+              than 30 years on the folding, assembly and structure of natural
+              fibrous proteins, such as phage P22 tailspikes and adenovirus
+              fibers. I subsequently got interested in using them as models for
+              the design of novel fibrous materials.
+            </div>
+            <a
+              class="read-more"
+              href="https://www.materials.uoc.gr/en/general/personnel/mitraki.html"
+              target="_blank"
+            >
+              <p>Read more</p>
+              <i class="ph-arrow-square-out-bold"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  /* Hero */
+  .hero-team-img {
+    background: url("https://static.igem.wiki/teams/4495/wiki/images/hero/hero-team6.jpg");
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50vw;
+    height: 75vh;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+    border-radius: 0 0 0 10%;
+  }
+
+  .team-hero {
+    height: 75vh;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2em;
+    font-family: var(--main-font);
+  }
+
+  .small-title {
+    position: relative;
+    font-family: var(--main-font-bold);
+    font-size: 1.625rem;
+    font-variant: small-caps;
+    margin-bottom: 0.5em;
+    color: var(--dark-blue-color);
+  }
+
+  .small-title::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--dark-blue-color);
+  }
+
+  .hand-drawn-line {
+    position: relative;
+  }
+
+  .hand-drawn-line::after {
+    content: url("https://static.igem.wiki/teams/4495/wiki/images/underline-draw.svg");
+    position: absolute;
+    bottom: -28px;
+    left: 2px;
+  }
+
+  .hero-title {
+    font-style: normal;
+    font-family: var(--main-font-bold);
+    font-size: 4.375rem;
+  }
+
+  /* Team Members */
+
+  .team-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    align-content: center;
+    margin-top: 2em;
+  }
+
+  .team-members-text {
+    margin-top: 5em;
+    font-family: var(--main-font);
+  }
+
+  .title-caps {
+    display: inline-block;
+    position: relative;
+    font-family: var(--main-font-bold);
+    font-size: 2rem;
+    font-variant: small-caps;
+    color: var(--dark-blue-color);
+
+    margin-bottom: 0.5em;
+  }
+
+  .team-members-text-content,
+  .supervisors-text-content {
+    font-family: var(--main-font-medium);
+    font-size: 1.25rem;
+  }
+
+  /* Supervisors */
+
+  .supervisors-section {
+    margin-top: 5em;
+  }
+
+  .supervisors-text {
+    font-family: var(--main-font);
+    padding-top: 3.75em;
+    padding-bottom: 2.5em;
+  }
+
+  .supervisors-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding-bottom: 3.75em;
+  }
+
+  .supervisors-card {
+    display: flex;
+    width: 37.5em;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .supervisor-img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .supervisor {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    font-family: var(--main-font);
+  }
+
+  .supervisor-name {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--dark-blue-color);
+    text-overflow: clip;
+  }
+
+  .supervisor-sentence {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 0.375em;
+    color: rgba(29, 53, 87, 0.75);
+  }
+
+  .supervisor-description {
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 19px;
+    margin-top: 1.5em;
+    color: #252525;
+  }
+
+  /* Read more link animation */
+
+  .read-more {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 2em;
+  }
+
+  .read-more p {
+    margin: 0;
+    position: relative;
+    color: var(--dark-blue-color);
+  }
+
+  .read-more::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    background: var(--coral-red-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+
+  .read-more p::before {
+    position: absolute;
+    content: "Read more";
+    width: 0;
+    inset: 0;
+    color: var(--coral-red-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+
+  .read-more:hover::after,
+  .read-more:hover p::before {
+    width: 100%;
+  }
+
+  .read-more i {
+    color: var(--dark-blue-color);
+    transition: 0.2s;
+    position: relative;
+    transition-delay: 0.2s;
+  }
+
+  .read-more:hover i {
+    transform: translate(4px, -4px);
+    color: var(--coral-red-color);
+  }
+
+  /* Media queries */
+
+  @media (max-width: 1400px) {
+    .supervisors-card {
+      width: 18.75em;
+      flex-direction: column;
+    }
+
+    .supervisor-img {
+      width: 100%;
+    }
+
+    .supervisor {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-team-img {
+      width: 100vw;
+      height: 45vh;
+      position: relative;
+    }
+
+    .team-hero {
+      width: 100%;
+      height: auto;
+      align-items: center;
+      margin-top: 1em;
+      gap: 1em;
+    }
+
+    .small-title {
+      display: none;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .supervisors-grid {
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .supervisors-card {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-title {
+      width: 100%;
+      font-size: 2.5rem;
+    }
+
+    .hero-title .hand-drawn-line::after {
+      transform: scale(0.6);
+      top: 0.5em;
+      left: -1em;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(1, auto);
+    }
+
+    .supervisor {
+      padding: 1em;
+    }
+  }
+</style>

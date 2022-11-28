@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Engineering">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Design", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Build", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Test", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Learn", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Engineering">Engineering</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Design</h1>
+          <p>
+            The initial literature research for our project began in March 2022
+            and our final project idea was formed in May. Minor modifications
+            were made throughout the summer months, as a result of extensive
+            literature revisits. The designing module of the project involved
+            deciding which parts, organisms, technics, and reagents will be
+            required. Specifically, we used an iGEM part, OmpA BBa_K1489002, to
+            surface display the LRR and NB-LRR domains of the Sw-5b resistance
+            gene of Solanum peruvianum on E. coli DH10B cells. We designed
+            primers for gene acquisition, specific domains of gene acquisition,
+            coding DNA synthesis, and primers for cloning compatibility. A small
+            region of the movement protein of TSWV (Nsm<sup>115-135</sup>) is
+            required for NLR recognition thus only this 21-amino acid coding
+            sequence was utilized in our experiments. Our novel binding molecule
+            consisted of an existing part(BB) and the plasmids used are:
+            plCH86988, pBluescript, pCHW1383 for cloning and pET-26b for protein
+            expression.
+          </p>
+          <p>
+            It is well documented in the literature that the Sw-5b resistance
+            gene directly binds the movement protein of several tospoviruses,
+            also our in silico investigation for the predicted structure and
+            binding potential of our novel chimeric protein indicated it was a
+            gene well-chosen. In addition, OmpA fusion proteins are abundant in
+            the literature which makes it a less risky option for a fusion
+            partner.
+          </p>
+          <p>
+            Alphafold is a recent AI system able to predict protein structures
+            when only given protein residue sequences. During our project
+            design, we frequently advised protein modeling predictions using
+            this program. Our Alphafold projections showed a high probability of
+            correct folding of both fusion partners and an adequate probability
+            of interaction with the movement protein of the tomato-spotted wilt
+            virus. The proof-of-concept demonstration experiment will include
+            the introduction of Agrobacterium tumefaciens transformed with NSm<sup
+              >115-135</sup
+            >:YFP which is the conserved effector domain of the movement protein
+            of the viruses recognized by Sw-5b fused with YFP into Nicotiana
+            sylvestris. Leaves expressing this construct will be subdued to
+            protein extraction with various methods and the protein extracts
+            will be used for E.coli treatment to test the binding activity of
+            these surface-displaying cells based on fluorescence after several
+            washes with TBS. On the other hand, E.coli surface-displaying random
+            peptides will be tested as a negative control. Our final results
+            given that our model is working as intended will be: fluorescent
+            E.coli cells that display our novel chimeric protein and not the
+            negative controls.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Build</h1>
+          <p>
+            In order to assemble the desired constructs, we proceeded in
+            planning out various experiments. Our end goal was to create
+            bacterial cells that surface display binding proteins for viral
+            effectors and a fusion protein of a &ldquo;detectable&rdquo;
+            effector protein. Our effector fusion protein is detectable with
+            fluorescence.
+          </p>
+          <p>
+            Primer design to include suitable restriction enzyme
+            recognition sites was key to our successful build. Primers for the
+            amplification of our preferred part (OmpA) right from iGEM&rsquo;s
+            2021 Distribution Kit was designed so the amplicon was Golden Gate
+            compatible with BsaI recognition sites and ensured that its
+            C-terminal fusion partners remain in frame. Primer design for NB-LRR
+            and LRR domains of <i><strong>S.peruvianum</strong></i> were designed
+            to be golden gate compatible for C-terminal fusion with OmpA. Forward
+            primer for OmpA&rsquo;s amplification as well as a reverse primer for
+            the NB-LRR and LRR domains were made so that after BsaI restrictive digestion,
+            they can ligate to the pLCH86988 vector. Primers for amplification of
+            pLCH86988:NB-LRR and pLCH86988:LRR were designed for cloning with restriction
+            enzymes (SstI and NdeI) and insertion into expression vector pET-2b.
+          </p>
+          <p>
+            The movement protein (Nsm<sup>115-135</sup>) of tomato spotted wilt
+            virus is recognized via a small (21 amino acid) sequence and due to
+            the difficulty in viral gene acquisition, we proceeded to utilize
+            only this small protein sequence that we synthesized using
+            oligo-nucleotides. We designed primers to cover the entire cDNA of
+            this sequence with an overlap of 20-nt for annealing and used PCR to
+            create and amplify the dsDNA. The amplicon had no stop codon for
+            C-terminal fusion with YFP for detection.
+          </p>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Test</h1>
+          <p>
+            After the acquisition of <i><strong>E.coli</strong></i> surface-displaying
+            NB-LRR and LRR domains of resistant protein Sw-5b and plant tissue expressing
+            Nsm<sup>115-135</sup>:YFP (effector recognition domain fused with
+            yellow fluorescent protein), our system is ready for testing. The
+            surface-displaying cells will be pelleted and resuspended in 100μl
+            PBS and the plant tissue expressing our construct will be subjected
+            to total protein extraction. 100μl of cells suspended in PBS will be
+            mixed with 100μl of protein extraction and incubated at 4 degrees
+            Celsius rotating. Incubation time will be 20 minutes, 30 minutes, 1
+            hour, and 2 hours. After the incubation cells will be subjected to
+            3x washes with PBS and OD<sub>600</sub> being measured after the third
+            step. Different cell concentrations were tested to find the optimal number
+            of cells for the detection of our target protein using a spectrophotometer.
+            Finally, samples will be tested for fluorescent activity using a Biomolecular
+            imager.
+          </p>
+          <p>
+            If our system works as intended, fluorescence will be observed in
+            samples of E.coli surface-displaying our binder protein and not in
+            E.coli surface-displaying random peptides (negative control). The
+            observance of fluorescent activity will indicate that our binding
+            proteins interacted with Nsm<sup>115-135</sup> and are able to be utilized
+            as a novel component of diagnostic tests.
+          </p>
+        </div>
+        <div id="part4" class="part scroll">
+          <h1 class="part-title">Learn</h1>
+          <p>
+            Our initial plan was to develop a project able to evolve through
+            constant troubleshooting, re-evaluation, and improving our design.
+            As intended, our early failures to transform E.coli Dh10b using iGEM
+            part DNA from the 2021 Distribution kit led us to begin our
+            troubleshooting rampage with different iGEM parts and various DNA
+            quantities. We also tested our competent cells using intact plasmid
+            DNA from our lab and checked our antibiotic stocks. Realizing that
+            none of the above were responsible for our unexpected results, we
+            proceeded to amplify the part of interest with PCR which was
+            successful. The process of taking a step back, trying to figure out
+            the problem, and reassessing our strategy was a huge learning curve.
+          </p>
+          <p>
+            Another setback that made us reconsider and redesign was our
+            inability to clone our PCR products to pBluescript vector. After
+            A-tailing of the PCR products, we ligated them to T-tailed linear
+            pBluescript vector which yielded incorrect products. So, we changed
+            our objective and proceeded to Golden Gate cloning with the PCR
+            products changing the ratio insert: vector as instructed by our
+            advisors. This procedure was enlightening and contributed to a
+            solution to our mishap. In retrospect, this alternative process was
+            more time-efficient than the original plan and from now on it will
+            be our go-to strategy.
+          </p>
+          <p>
+            In our final experiment where we provide evidence of our binder
+            efficiency, we had to rearrange our protocol. Initially, we
+            incubated our E.coli surface-displaying the binding proteins with
+            the total protein extraction for 20 minutes and we failed to detect
+            any fluorescent signal. Thus, we had to change the incubation time,
+            as well as try other cell concentrations and temperatures. Finally,
+            we optimized the conditions necessary for our effector-binding cells
+            to thrive.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+<style>
+  @import "../../static/styles/text-page.css";
+
+  strong {
+    color: var(--blue-color);
+  }
+</style>

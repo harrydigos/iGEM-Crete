@@ -1,0 +1,939 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Implementation">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Going beyond ideas", id: "part1" },
+            subParts: [
+              { title: "Design & Building", id: "design" },
+              { title: "User Manual", id: "User-Manual" },
+            ],
+          },
+          {
+            mainPart: { title: "Identifying global needs", id: "part2" },
+            subParts: [
+              { title: "Charting", id: "charting" },
+              { title: "Distribution", id: "distribution" },
+            ],
+          },
+          {
+            mainPart: { title: "Scaling Up", id: "part3" },
+            subParts: [
+              { title: "Large Scale", id: "large-scale" },
+              { title: "Final Goal", id: "final-goal" },
+            ],
+          },
+          {
+            mainPart: { title: "Important side-notes", id: "part4" },
+            subParts: [
+              { title: "Minimal Waste", id: "minimal-waste" },
+              { title: "Validity", id: "validity" },
+              { title: "Policies", id: "policies" },
+            ],
+          },
+          {
+            mainPart: { title: "References", id: "part5" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Implementation">
+        Implementation
+      </div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Going beyond Ideas</h1>
+        </div>
+        <div id="design" class="subpart">
+          <h3 class="section-title">Design & Building</h3>
+          <p>
+            Designing a test kit that can be used outside the lab can be an
+            arduous task and one should always tread carefully. Various chemical
+            substances have the caveat that they cannot be used without proper
+            equipment or prior expertise. Moreover chemicals that are harmful to
+            the environment or the user must be excluded. Additionally, using
+            low cost substances and techniques in the test kit is of primordial
+            importance to us since it constitutes one of the most important
+            advantages in comparison with existing detection techniques. Last
+            but not least, all the reagents used must be able to sustain
+            long-distance transportation so as not to arrive in foul condition
+            in their end destination.
+          </p>
+          <p>
+            For that reason we sought to pinpoint the best reagents and tools
+            that would be required in our kit individually.
+          </p>
+          <p>
+            After careful consideration, conversations with agricultural
+            scientists, literature search and small experiments, that you can
+            find below, we decided that each kit would include the following:
+          </p>
+          <p>
+            <strong>3 Eppendorf tubes(1.5ml) each containing:</strong>
+          </p>
+          <ul>
+            <li class="lists">
+              0.3 ml of the lysis buffer (50% ethanol/2M NaCl) with a modified
+              cap for easy content discharge
+            </li>
+            <li class="lists">0.7 ml of our fixated engineered e-coli cells</li>
+            <li class="lists">1 ml of ethanol 100% sealed hermetically</li>
+          </ul>
+
+          <p>
+            <strong>3 Eppendorf tubes(1.5ml) each containing:</strong>
+          </p>
+          <p>
+            <strong>
+              1 test strip attached to a 3D PLA printed platform in the same
+              fashion as the one found in SARS-CoV-2 tests
+            </strong>
+          </p>
+          <p>
+            <strong>1 Instruction manual</strong>
+          </p>
+          <p>
+            In order to find the best possible lysis buffer that would
+            simultaneously be cheap to produce and safe for users we devised the
+            following experiments:
+          </p>
+          <p>
+            After a thorough search through literature during which we aimed to
+            find the quickest and highest yielding method for plant cell lysis<sup
+              >1,2</sup
+            >, we narrowed down our results to the ones that needed no special
+            equipment or temperatures above or below room temperature. Moreover
+            we tried to use variations of known cell lysis buffers as standalone
+            buffers that would normally be part of a greater protocol.
+          </p>
+          <p>
+            After a thorough search through literature during which we aimed to
+            find the quickest and highest yielding method for plant cell lysis
+            1,2, we narrowed down our results to the ones that needed no special
+            equipment or temperatures above or below room temperature. Moreover
+            we tried to use variations of known cell lysis buffers as standalone
+            buffers that would normally be part of a greater protocol.
+          </p>
+          <p>
+            Leaves from a single <i>Arabidopsis thaliana</i> plant were collected
+            and cut down in approximately equal pieces (Image 1)
+          </p>
+          <p>
+            For each solution tested two methods of mechanical breaking down was
+            used: one with a plastic pestle and one with a toothpick (Image 2).
+          </p>
+          <p>
+            After 10 mins have passed, in each buffer containing the lysed
+            cells, a Trypan blue 4% solution was added to stain dead cells. 25
+            ul of each sample was then immediately placed on a Neubauer slide
+            and the ratios of dead to total cells were counted (Image 3).
+          </p>
+          <p>
+            <strong>Results are presented below:</strong>
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td class="table-titles"><strong>Solution</strong></td>
+                <td class="table-titles"><strong>Type of tool used</strong></td>
+                <td class="table-titles"
+                  ><strong>D/total cells Ratio</strong>
+                </td>
+                <td class="table-titles"
+                  ><strong
+                    >Weighted D/total cells aka ratio-contribution of solution</strong
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>NaOH 0.1M/SDS 2%</td>
+                <td>Pestle</td>
+                <td>0.535433071</td>
+                <td>1.255498235</td>
+              </tr>
+              <tr class="table-rows">
+                <td>NaOH 0.1M/SDS 2%</td>
+                <td>Toothpick</td>
+                <td>0.568181818</td>
+                <td>3.357438017</td>
+              </tr>
+              <tr>
+                <td>EDTA 20 uM/3.5M NaCl</td>
+                <td>Pestle</td>
+                <td>0.607594937</td>
+                <td>1.424705369</td>
+              </tr>
+              <tr class="table-rows">
+                <td>EDTA 20 uM/3.5M NaCl</td>
+                <td>Toothpick</td>
+                <td>0.210084034</td>
+                <td>1.241405653</td>
+              </tr>
+              <tr>
+                <td>EDTA 20 uM/1.4M NaCl</td>
+                <td>Pestle</td>
+                <td>0.222222222</td>
+                <td>0.521072797</td>
+              </tr>
+              <tr class="table-rows">
+                <td>EDTA 20 uM/1.4M NaCl</td>
+                <td>Toothpick</td>
+                <td>0.254545455</td>
+                <td>1.504132231</td>
+              </tr>
+              <tr>
+                <td>EtOH 50%/2M NaCl</td>
+                <td>Pestle</td>
+                <td>0.73255814</td>
+                <td>1.717722534</td>
+              </tr>
+              <tr class="table-rows">
+                <td>EtOH 50%/ 2M NaCl</td>
+                <td>Toothpick</td>
+                <td>0.621621622</td>
+                <td>3.673218673</td>
+              </tr>
+              <tr>
+                <td>EtOH 70%/2M NaCl</td>
+                <td>Pestle</td>
+                <td>0.702290076</td>
+                <td>1.646749145</td>
+              </tr>
+              <tr class="table-rows">
+                <td>EtOH 70%/2M NaCl</td>
+                <td>Toothpick</td>
+                <td>0.348837209</td>
+                <td>2.061310782</td>
+              </tr>
+              <tr>
+                <td>NaCl 2M</td>
+                <td>Pestle</td>
+                <td>0.513513514</td>
+                <td>1.204100652</td>
+              </tr>
+              <tr class="table-rows">
+                <td>NaCl 2M</td>
+                <td>Toothpick</td>
+                <td>0.320895522</td>
+                <td>1.896200814</td>
+              </tr>
+              <tr>
+                <td>Positive Control (freeze thaw)</td>
+                <td>&nbsp;</td>
+                <td>0.863636364</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr class="table-rows">
+                <td>Negative Control (dH20)</td>
+                <td>Pestle</td>
+                <td>0.426470588</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Negative Control (dH20)</td>
+                <td>Toothpick</td>
+                <td>0.169230769</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            With a quick look over the data one can easily infer that the
+            plastic pestle is by far superior to a toothpick even in dH20 alone.
+            Thus, given that a pestle will be used, the best solution option is
+            EtOH 50%/2M NaCl.
+          </p>
+        </div>
+        <div id="User-Manual" class="subpart scroll">
+          <h3 class="section-title">User Manual</h3>
+          <p>
+            Lastly, we designed the instruction manual that includes all needed
+            information in a simple yet precise manner for anyone to use. We
+            aimed to streamline the process by naming all solutions used as
+            S1,S2 and S3 and we also included a key for the interpretation of
+            results. It is our belief that we simplified the process as best as
+            we could without sacrificing any sort of scientific validity.
+          </p>
+          <div>
+            <img
+              width="40%"
+              src={`${ASSETS_URL}/images/implementation/contents.png`}
+            />
+            <img
+              width="40%"
+              src={`${ASSETS_URL}/images/implementation/instruction.png`}
+            />
+          </div>
+        </div>
+
+        <div id="part2" class="part scroll">
+          <h1 class="part-title">Identifying global needs</h1>
+        </div>
+        <div id="charting" class="subpart scroll">
+          <h3 class="section-title">Charting</h3>
+          <p>
+            As with every virus, TSWV has its own distinct epidemiology,
+            affecting some countries more than others. That is the reason that
+            we sought to pinpoint the countries most heavily affected by the
+            pathogen. After a thorough search we stumbled across some very well
+            upkept databases that included data on the spread of tospoviruses
+            around the world as well as their future projected status. A great
+            model country to study the epidemiology of TSWV would be Egypt since
+            it occupies a large portion of the worldwide tomato production but
+            data, compared to other countries, are not easily retrievable.
+          </p>
+          <p>
+            According to FAO and Hagar Saeed, journalist of the “Egyptian
+            Gazette”, the area of agricultural land in Egypt is confined to the
+            Nile Valley and delta, with a few oases and some arable land in
+            Sinai. The total cultivated area estimations range from 7.2 to 11.5
+            million feddans (1 feddan = 0.42 ha), depending on the year and the
+            definition of what constitutes a cultivated land. Agriculture is a
+            major component of the Egyptian economy, contributing 11.3 % of the
+            country’s gross domestic product. The agricultural sector accounts
+            for 28 % of all jobs and over 55 % of employment in Upper Egypt is
+            agriculture-related.
+          </p>
+          <p>
+            It is important to note that the extent of the damage that solely
+            TSWV has caused is unknown, yet it surely contributes to the plummet
+            observed.
+          </p>
+          <div>
+            <img
+              width="100%"
+              src={`${ASSETS_URL}/images/implementation/egypt-prod.png
+            `}
+            />
+          </div>
+          <p>
+            Nonetheless, one should always keep in mind that TSWV also affects
+            pepper, lettuce, potato, papaya, groundnut, tobacco and
+            chrysanthemum crops but most importantly, TSWV has an extremely wide
+            host range with more than 1300 wild and weed species<sup>5,6</sup>.
+            This includes plant species in 15 monocotyledonous and 69
+            dicotyledonous families and one family of the Pteridophyta making it
+            a major danger in our efforts for environmental conservation. Given
+            that a plant can be a TSWV host even post-harvest makes it extremely
+            easy to spread as the following map indicates
+          </p>
+          <div>
+            <img
+              width="100%"
+              src={`${ASSETS_URL}/images/implementation/distributionmap.png
+            `}
+            />
+          </div>
+          <p>
+            It is our personal opinion that even some countries not highlighted
+            are affected by the virus yet either the presence of the virus has
+            gone undetected or the spread has happened recently and data is
+            still not available.
+          </p>
+          <p>
+            In any case there is no doubt that this virus is a global concern
+            that, for now, affects some countries more.
+          </p>
+        </div>
+        <div id="distribution" class="subpart scroll">
+          <h3 class="section-title">Distribution</h3>
+          <p>
+            With an ideal candidate country in mind (Egypt) we sought out to
+            identify the best possible way of distribution to it and what would
+            that hypothetical deployment would require.
+          </p>
+          <p>
+            Distribution methods are heavily limited by the fact that the test
+            includes live cells. Even though the cells, per se, are fixated and
+            thus minimal danger is posed in regards to their survivability, the
+            fact that they remain alive is enough of a liability for
+            transportation standards. This is why we sought to learn how live
+            material is preserved and transported in countries like Egypt and
+            China. After short communications with people on the transportation
+            sector we were informed that each country has its own distinct laws
+            when it comes to importing and/or quarantining live material from
+            other countries. We decided that it would be more realistic to focus
+            our efforts in our neighbouring country of Egypt since actual
+            transportation of our manufactured test there would be more
+            realistic.
+          </p>
+          <p>
+            After reaching out to transportation companies and legal advisors we
+            came to the conclusion that it would be wiser to ship our tests in
+            bulk. Each test kit would be put in a hermetically sealed envelope
+            and all envelopes would be placed in a 20*20*20 centimetre box. Each
+            box would fit 15 kits and the average cost of transportation after
+            enquiring about the cost in 8 different transportation companies was
+            calculated to be 65.45 € thus amounting to a transportation cost of
+            4.36 € per kit. In addition to the aforementioned cost of production
+            of the kit the grand total for the production and delivering of the
+            test is 5.46 € .
+          </p>
+          <p>
+            Up next we decided to investigate the intricacies involved with
+            transporting genetically modified microorganisms (GMMOs or GMMs).
+            Depending on the mode of transportation, the country of origin and
+            arrival, laws may vary. In our case we had to cover each part
+            separately.
+          </p>
+          <p><strong>Departing from Greece</strong></p>
+          <p>
+            The laws of Greece regarding the export of GMMOs have been replaced
+            and are in total alignment with the ones proposed by EU. More
+            specifically according to “Directive 2001/18”, “Regulation
+            1829/2003”, “Regulation 1830/2003” and “Directive 90/219/EEC” even
+            though the deployment of such organisms in EU soil is strictly
+            regulated and a final decision on its usage may take up to 10 years.
+            However, regarding transportation laws regulate that a legal entity
+            is to be always held accountable for the transportation after a
+            thorough quality check and an approval system that is yet to be
+            deployed in its final form. After consulting with various experts on
+            the field we have been informed that such an approval process may
+            take up to a few years, giving us enough time to perfect our project
+            and minimise any risk.
+          </p>
+          <p><strong>Transportation</strong></p>
+          <p>
+            Rules regarding the transportation of GMMOs are set by the IATA
+            Dangerous Goods Regulations (62nd Edition) that is effective since
+            the 1st of January 2021. Genetically modified organisms and
+            microorganisms which do not meet the definition of toxic or
+            infectious substances (such as ours is) must be assigned to code UN
+            3245. Boxes and individual contents must be shipped following
+            Packing Instruction P904 (ICAO/IATA PI959) with a proper shipping
+            name. This can be UN 3245 followed either by “GENETICALLY MODIFIED
+            MICRO- ORGANISMS” or "GENETICALLY MODIFIED ORGANISMS".
+          </p>
+          <div class="center">
+            <img
+              src={`${ASSETS_URL}/images/implementation/un3245.jpg
+            `}
+            />
+          </div>
+          <p><strong>Arriving in Egypt</strong></p>
+          <p>
+            According to the Library of Congress of the U.S “Egypt has no
+            restrictions on releasing genetically modified organisms into the
+            environment. In March 2008, the Ministry of Agriculture approved the
+            domestic cultivation of genetically modified corn, and the Egyptian
+            Ministry of Agriculture allowed the importation of twenty-eight tons
+            of genetically modified corn seeds into Egyptian markets. However,
+            in the spring of 2009, genetically modified corn seed imports were
+            halted so that the National Biosafety Committee (NBC) could complete
+            the country’s National Biosafety Framework (though the NBC continued
+            to permit the planting of locally produced biotech seeds in newly
+            reclaimed areas)”. Moreover, via our own research we could not find
+            any special laws that have been drafted and voted by local or
+            national assemblies on the importation and deployment of GMMOs.
+          </p>
+          <p>
+            In conclusion it is our firm belief that realistically speaking, the
+            most austere measures that need to be abided to are the ones set by
+            the E.U, yet the lack of appropriate laws by the Egyptian government
+            must not take away from the serious nature with which we need to
+            design our test kit in order to avoid any accidental deployment of
+            our living yet fixated genetically modified e-coli cells in Egyptian
+            soil.
+          </p>
+          <p>
+            Once all requirements are met it would be wise to look to more
+            countries on their respective laws. However, it is a good practice
+            to always abide to the strictest of laws regarding GMMOs and build
+            the detection kit accordingly in order to avoid future obs.
+          </p>
+        </div>
+        <div id="part3" class="part scroll">
+          <h1 class="part-title">Scaling Up</h1>
+          <p>
+            Italy presents itself as a prime candidate for Mediterranean and
+            Alpine biodiversity with rapid geological switches between
+            ecosystems. Due to its prime location in the centre of Southern
+            Europe, its proximity to Greece and the fact that it is a member of
+            the European Union, Italy is an ideal place for setting up our first
+            outsourced European taskforce.
+          </p>
+          <p>
+            This part of the implementation would be the most primordial if our
+            project was purely diagnostic. Nonetheless, given that our team, in
+            the end of the day, proposes a general approach in conservation
+            strategies of the future renders this part of our implementation
+            strategy just as important as any other part. With no errors in
+            judgement one can easily infer the fact that implementation for one
+            type of plant, either crop or wild, equals implementation for all.
+            This fact stems from the &ldquo;one-test-fits-all&rdquo; character
+            of our project as well as the relatively uniform nature of laws
+            regarding its usage. Ergo, the following hypothetical 10-year plan
+            was drafted by our team concerning the gradual establishment of our
+            tool as a way to track and aptly face plant epidemics.
+          </p>
+          <p><strong>Years 1-3</strong></p>
+          <p>
+            Actions of the team throughout the first years would not look much
+            different than the ones performed at the moment. In a larger
+            timeframe our team would be able to work constantly on
+            troubleshooting any major or minor difficulties our kit would face
+            in the real world while searching for the additional funding that
+            would be required to carry them out. Moreover throughout these
+            years, through conversations with law experts, EU lawmakers and
+            relevant independent think tanks and groups we would be able to
+            draft out and commence all the required processes so we abide by, at
+            least, EU law by the time of the first field usage.
+          </p>
+          <p>
+            In the meantime, our R&amp;D team would pinpoint all the available
+            plant species or their crop relatives that are impacted by TSWV and
+            draft multiple comparative tests in an enclosed lab environment in
+            order to quantify our kit&rsquo;s efficacy as a whole. Additional
+            methods to streamline the tool&rsquo;s production would be
+            investigated as well.
+          </p>
+          <div id="large-scale" class="subpart scroll">
+            <h3 class="section-title">Large Scale</h3>
+            <p><strong>Year 4-6</strong></p>
+            <p>
+              Given that all open-ends of our project have been located and
+              resolved, in these years our team would conduct the set of
+              experiments proposed in the following table. Please note that some
+              experiments such as 2 and 3 will coincide for some of their
+              duration. Please advise the timeline provided after the table for
+              full information.
+            </p>
+            <table class="width">
+              <tbody>
+                <tr>
+                  <td class="table-titles"><strong>Experiment No</strong></td>
+                  <td class="table-titles"><strong>Scale</strong></td>
+                  <td class="table-titles"><strong>Plant species</strong></td>
+                  <td class="table-titles"><strong>Location</strong></td>
+                  <td class="table-titles"><strong>Length</strong></td>
+                  <td class="table-titles"><strong>User</strong></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Small</td>
+                  <td>1</td>
+                  <td>Crop fields</td>
+                  <td>3 months</td>
+                  <td>Our team</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>2</td>
+                  <td>Small</td>
+                  <td>1</td>
+                  <td>Crop fields</td>
+                  <td>6 months</td>
+                  <td>Certified Personnel</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Medium</td>
+                  <td>2-10</td>
+                  <td>Crop fields</td>
+                  <td>1 year</td>
+                  <td>Farmers</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>4</td>
+                  <td>Small</td>
+                  <td>1</td>
+                  <td>Wild</td>
+                  <td>6 months</td>
+                  <td>Our team</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Large</td>
+                  <td>10-30</td>
+                  <td>Crop fields</td>
+                  <td>15 months</td>
+                  <td>Farmers</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>6</td>
+                  <td>Medium</td>
+                  <td>2-10</td>
+                  <td>Wild</td>
+                  <td>2 months</td>
+                  <td>Our team</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Medium</td>
+                  <td>2-10</td>
+                  <td>Wild</td>
+                  <td>1 year</td>
+                  <td>Certified Personnel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <img
+              width="100%"
+              src={`${ASSETS_URL}/images/implementation/planned-4-6-2-preview.png
+            `}
+            />
+          </div>
+          <p>
+            In the middle of the period a gradual shift can be observed towards
+            the wild. This shift is completely intentional and ties entirely
+            with our plans for years 7-10.
+          </p>
+        </div>
+        <div id="final-goal" class="subpart scroll">
+          <h3 class="section-title">Final Goal</h3>
+          <p><strong>Years 7-10</strong></p>
+          <p>
+            As we have already stated, our final goal is to provide a viable
+            solution for conservation efforts around the globe. After
+            successfully completing the aforementioned experiments our team
+            would find itself in an advantageous position; by having established
+            our tool in the field of agrodiagnostics our team would have the
+            necessary funds to redirect towards conservation efforts. By using
+            the income generated from crop conservation efforts we can:
+          </p>
+
+          <p>
+            1. &nbsp; Conduct the experiments needed for the repurposing of our
+            kit to diagnose even more phytopathogens
+          </p>
+          <p>
+            2. &nbsp; Establish permanent task force teams in places of interest
+            for reconnaissance expeditions in places of rich wilderness
+          </p>
+          <p>
+            <strong>1. Repurposing</strong>
+          </p>
+          <p>
+            Even though TSWV, and tospoviruses in general, certainly pose a
+            great threat to biodiversity, a plethora of phytopathogens exist
+            that have the potential to harm wild plants or they already have.
+            Microorganisms such as&nbsp;Phytopthora infestans, Ips typographus,
+            Anoplophora chinensis, Thaumetopoea pityocampa&nbsp;and many more
+            are becoming an increasing threat in forests, especially the ones in
+            the Holarktis region. According to the European Commission&rsquo;s
+            (DG ENV) final report on the disturbances of EU forests caused by
+            biotic agents (2012)3&nbsp;these pathogens exhibit an aggressive
+            spread and demonstrate a large spectrum of minima and maxima of
+            survivability. Accordingly in Neotropis and Paleotropis, several
+            dangerous pathogenic species have been identified. Notably in the
+            Amazon Forest, certain soils reveal susceptibility to phytopathogens
+            and lower fungal community dissimilarity than other
+            forests4&nbsp;thus making it a prime candidate for the proliferation
+            of harmful microbial species.
+          </p>
+          <p>
+            Repurposing the detection kit won&rsquo;t be an easy task.
+            Nonetheless, given that our R&amp;D team will only have this single
+            task as their only preoccupation, combined with their projected
+            gained expertise throughout the past 7 years, a proper full-out
+            repurposing seems realistic.
+          </p>
+          <p><strong>2. Taskforces</strong></p>
+          <p>
+            Without a doubt, phytopathogens infiltrating and destroying the
+            wildlife flora are a global problem. That fact, combined with the
+            open trade of people, materials and plants creates the need to
+            address this problem in a global scale.
+          </p>
+          <p>
+            Of course one team of 15 people cannot do that by themselves. It is
+            thus proposed that task force centres are established in every
+            continent, with permanent personnel, fully funded by the income of
+            our agrodiagnostics section of the project and with the approval of
+            every respective country.
+          </p>
+          <p>
+            These centres will be in charge of receiving, distributing and
+            conducting the diagnostics test, while gathering data on each
+            pathogens epidemiology within the country but in neighbouring states
+            as well. Along with governments, they will work together to draft
+            new conservation policies and promote the importance of
+            environmental conservation in their local societies.
+          </p>
+          <p>
+            After meetings with members of organisations that include kindred
+            taskforces in their organisational plan, we reached the conclusion
+            that each centre would require at least the following:
+          </p>
+          <ul>
+            <li class="lists">A General Manager</li>
+            <li class="lists">
+              A scientific team of at least 10 people in charge of testing
+            </li>
+            <li class="lists">
+              A team in charge of logistics and transportation
+            </li>
+            <li class="lists">A team of at least 2 data analysts</li>
+            <li class="lists">A legal team of at least 3 people</li>
+            <li class="lists">
+              A team in charge of communication and public media engagement
+            </li>
+            <li class="lists">
+              An obligatory diverse team acting as the liaisons of the taskforce
+              and the general public
+            </li>
+          </ul>
+          <p>
+            Choosing the countries where those taskforces would be set up was
+            not an easy feat as many parameters had to be put under
+            consideration including but not limited to the severity of the state
+            of the local wildlife, the legal prerequisites for realising such a
+            task, the costs of setting up a team there and the ease of access
+            from and to neighbouring countries. For each primary taskforce
+            choice presented in the map below a short explanation is provided:
+          </p>
+          <div>
+            <img
+              width="90%"
+              src={`${ASSETS_URL}/images/implementation/task-force-locations-worldwide.png
+            `}
+            />
+          </div>
+          <p><strong>Elaboration on our primary taskforce locations</strong></p>
+          <p><strong>Brazil</strong></p>
+          <p>
+            Brazil was one of the most abundantly clear candidates for setting
+            up a taskforce due to its extremely rich biodiversity, the
+            importance of its tropical forests worldwide, its location in the
+            continent of South America, its large population and its large
+            contribution in the worldwide plant produce economy.
+          </p>
+          <p><strong>Italy</strong></p>
+          <p>
+            Italy presents itself as a prime candidate for Mediterranean and
+            Alpine biodiversity with rapid geological switches between
+            ecosystems. Due to its prime location in the centre of Southern
+            Europe, its proximity to Greece and the fact that it is a member of
+            the European Union, Italy is an ideal place for setting up our first
+            outsourced European taskforce.
+          </p>
+          <p><strong>DR Congo</strong></p>
+          <p>
+            The Democratic Republic of Congo is one of the most rapidly
+            developing countries of the African continent. It was partly chosen
+            for the same reasons Brazil was, that is, for its prime geographical
+            position and its vast rainforests.
+          </p>
+          <p><strong>India</strong></p>
+          <p>
+            India presents some unique features that little to no countries
+            possess in the globe. Its unique biodiversity, unusual crop
+            produces, extremely rich sociocultural background and the growing
+            public interest on environmental conservation strategies make it a
+            place in the project&rsquo;s portfolio that can widen possible
+            target plants while being a testing ground for locating the very
+            much needed balance between agrodiagnostics and conservation
+            diagnostics.
+          </p>
+          <p><strong>Australia</strong></p>
+          <p>
+            Australia is a vast country that entails many unique ecosystems
+            ranging from desserts to rainforests. Due to its unusual fauna it
+            comprises a major source of information on the constant correlations
+            and interactions between flora and fauna and how our efforts on
+            plant conservation may aid animal conservation as well. Moreover,
+            Australian laws are extremely favourable in matters that revolve
+            around the preservation of their ecosystems.
+          </p>
+        </div>
+        <div id="part4" class="part">
+          <h1 class="part-title">Important side-notes</h1>
+        </div>
+        <div id="minimal-waste" class="subpart">
+          <h3 class="section-title">Minimal Waste</h3>
+          <p>
+            Our team is very keen on leading and assisting conservation efforts
+            around the world. It is thus only natural that we lead by example.
+            Our test kit as well as the delivery methods that we will employ are
+            expected to be the less harmful to the environment. For instance, we
+            opted in using biodegradable plastic materials made from corn rather
+            than classic plastic. Moreover, once our project is scaled up, we
+            aim to use 3D printers powered by sunlight to mass produce our
+            testing platforms. In addition to that, when the aforementioned
+            taskforces are fully set up and running, the kits arriving them
+            won&rsquo;t arrive separately but in bulk instead. For example, bulk
+            ethanol and nanopure water could be delivered in them and the proper
+            dilutions for the solutions needed could be performed by the
+            personnel there. This saves a lot of transportation costs while also
+            minimising the lab consumables used.
+          </p>
+          <p>
+            Alternatively, transportation costs and general upkeeping costs
+            could be minimised by establishing close collaborations with local
+            business in matters like supplies or server upkeeping for the
+            storage of the collected data.
+          </p>
+        </div>
+        <div id="validity" class="subpart">
+          <h3 class="section-title">Validity</h3>
+          <p>
+            Our project during its deployment must be validated and verified
+            with two ways; one in a scientific environment and one in the
+            sociopolitical environment. The first one is an almost&nbsp;de
+            facto&nbsp;prerequisite for the kickstarting of our project and the
+            acquisition of the stakeholders. The later must come through
+            meetings with the powers that be in multiple governing levels. We
+            understand that this is no task for an undergraduate team yet we
+            remained convinced that the seriousness of our efforts along with
+            support from our parent institutions [University of Crete and
+            Foundation for Research and Technology Hellas (F.O.R.T.H)] will be
+            enough of a motoring force for initialising this part of our
+            project.
+          </p>
+        </div>
+        <div id="policies" class="subpart">
+          <h3 class="section-title">Policies</h3>
+          <p>
+            Any conservation effort, regardless of its origin, is almost doomed
+            to fail if it&rsquo;s not backed up by corresponding laws from each
+            country. Furthermore we understand that our proposal will not be a
+            panacea in this problem. Additionally its full implementation, if
+            everything goes according to plan, will not happen before 2032. 10
+            years, in the context of environmental conservation, is a lot of
+            time. By then more, and likely better, solutions will exist that, in
+            addition to ours, will make tackling the problem even easier.
+          </p>
+          <p>
+            In this effort we are not alone. We aim to help kindred efforts to
+            ours as well by using the potency of our proposal to push for better
+            law and policy making. Our solution is global and so the
+            conservation laws should be. By exhibiting diagnostic consistency, a
+            large spectrum of target pathogens and proper data collecting and
+            analysis, we reckon that we can indeed shift the world towards
+            adopting a universal set of policies.
+          </p>
+        </div>
+        <div id="part5" class="part">
+          <h1 class="part-title">References</h1>
+          <p>
+            1.&nbsp;Tsugama, D., Liu, S. &amp; Takano, T. A rapid chemical
+            method for lysing&nbsp;Arabidopsis&nbsp;cells for protein
+            analysis.&nbsp;Plant Methods&nbsp;7, 22 (2011).<a
+              target="_blank"
+              href="https://doi.org/10.1186/1746-4811-7-22"
+              >&nbsp;https://doi.org/10.1186/1746-4811-7-22</a
+            >
+          </p>
+          <p>
+            2.&nbsp;Emaus, M.N., Cagliero, C., Gostel, M.R.&nbsp;et
+            al.&nbsp;Simple and efficient isolation of plant genomic DNA using
+            magnetic ionic liquids.&nbsp;Plant Methods&nbsp;18, 37 (2022).<a
+              target="_blank"
+              href="https://doi.org/10.1186/s13007-022-00860-8"
+              >&nbsp;https://doi.org/10.1186/s13007-022-00860-8</a
+            >
+          </p>
+          <p>
+            3.&nbsp;BIO Intelligence Service (2011), Disturbances of EU forests
+            caused by biotic agents, Final Report prepared for European
+            Commission (DG ENV)
+          </p>
+          <p>
+            4.&nbsp;A.E.S. Cerqueira, T.H. Silva, A.C.S. Nunes, D.D. Nunes, L.C.
+            Lobato, T.G.R. Veloso, S.O. De Paula, M.C.M. Kasuya, C.C. Silva,
+            Amazon basin pasture soils reveal susceptibility to phytopathogens
+            and lower fungal community dissimilarity than forest, Applied Soil
+            Ecology,Volume 131, 2018, Pages 1-11, ISSN 0929-1393,&nbsp;<a
+              target="_blank"
+              href="https://doi.org/10.1016/j.apsoil.2018.07.004"
+              >https://doi.org/10.1016/j.apsoil.2018.07.004</a
+            >.
+          </p>
+          <p>
+            5.&nbsp;Parrella, G., Gognalons, P., Gebre-Selassi&egrave;, K.,
+            Vovlas, C., Marchoux, G., 2003. An update of the host range of
+            tomato spotted wilt virus. Journal of Plant Pathology, 85(4 Special
+            issue), 227-264. doi: 10.2307/41998156
+          </p>
+          <p>
+            6. Turina, M., Tavella, L., Ciuffo, M., 2012. Tospoviruses in the
+            Mediterranean area. Advances in Virus Research, 84, 403-437. doi:
+            10.1016/B978-0-12-394314-9.00012-9
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 25%;
+    left: 15px;
+  }
+
+  .table-titles {
+    padding: 0.125em 0.25em;
+    background-color: var(--coral-red-color);
+    width: fit-content;
+    max-width: 150px;
+  }
+
+  .table-titles strong {
+    color: white;
+  }
+
+  strong {
+    color: var(--blue-color);
+  }
+
+  .table-rows {
+    padding-left: 0.5em;
+    background-color: #fce7e9;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  td {
+    padding-left: 0.5em;
+  }
+
+  @media (max-width: 380px) {
+    table {
+      font-size: 0.75rem;
+    }
+  }
+  @media (max-width: 350px) {
+    table {
+      font-size: 0.625rem;
+    }
+  }
+</style>

@@ -1,0 +1,285 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Modelling">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Movement Protein Prediction", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Synthetic Construct Prediction", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Interaction Prediction", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "False Positives Prediction", id: "part4" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Primer Design", id: "part5" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Modelling">Modelling</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Movement Protein Prediction</h1>
+          <p>
+            One of our priorities during our project’s realization was to figure
+            out the 3D structure of the TSWV movement protein. Given that no
+            publicly available structures for our molecule of interest existed,
+            we performed a prediction from its amino acid sequence using
+            AlphaFold. The results with the highest pLDDT andpTMscore (66.66 and
+            0.57 respectively) was the following:
+          </p>
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image1.png`} />
+          <p>
+            Our MSA coverage, alignment error and LDDT was the following, thus
+            giving us adequate certainty, combined with our protein scores for
+            the general structure of our protein.
+          </p>
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image2.png`} />
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image3.png`} />
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Synthetic Construct Prediction</h1>
+          <p>
+            Up next we aimed to figure out the structure of our synthetic
+            construct. First we ran our sequence through Expasy’s translational
+            tool in “Compact: M, -, no spaces, Standard Genetic code, Forward
+            Strand” settings to retrieve our amino acid sequence. <br />By all
+            the possible frames received, we chose the first frame since it’s
+            the only one that is gapless and runs all the way through, thus
+            producing our desired aa sequence:
+          </p>
+          <p>5'3' Frame 1</p>
+          <div class="wrap-text">
+            MKATKLVLGAVILGSTLLAGCSSNAKIDQGINPYVGFEMGYDWLGRMPYKGSVENGAYKAQGVQLTAKLGYPITDDLDIYTRLGGMVWRADTKSNVYGKNHDTGVSPVFAGGVEYAITPEIATRLEYQWTNNIGDAHTIGTRPDNGGGSGGGLKHLPDRHSNLVTDEEVVGFENKAEELIDYLIRGTNELDVVPIVGMGGQGKTTIARKLYNNDIIVSRFDVRAWCIISQTYNRRELLQDIFSQVTGSDDNGATVDVLADMLRRKLMGKRYLIVLDDMWDCMVWDDLRLSFPDDGIRSRIVVTTRLEEVGKQVKYHTDPYSLPFLTTEESCQLLQKKVFQKEDCPPELQDVSQAVAEKCKGLPLVVVLVAGIIKKRKMEESWWNEVKDALFDYLDSEFEEYSLATMQLSFDNLPHCLKPCLLYMGMFSEDARIPASTLISLWIAEGFVENTESGRLMEEEAEGYLMDLISSNLVMLSKRTYKGRVKYCQVHVVVHHFCLEKSREAKFMLAVKGQYIHFQPSDWKGTRVSFSFSEELSKFASLVSKTQKPFHQHLRSLITTNRAKSINDIFSCQISELRLLKVLDLSSYIVEFLSLATFKPLNQLKYLAVQAFEFYFDPGSHLPHIETFIVMNLPYYDILLPVSFWEMKKLRHAHFGKAEFDKQGLSEGSSKLENLRILKNIVGFDRVDVLSRRCPNLQQLQITYFGNNEEPFCPKLENLTQLQQLQLSFARPRTLSGLQLPSNLNKLVLEGIHIGCVIPFIAGLPSLEYLQLHDVCFPQSEEWCLGDITFHKLKLLKLVKLNISRWDVSEESFPLLETLVIKKCIDLEEIPLSFADIPTLEQIKLIGSWKVSLEDSAVRMKEEIKDTEGCDRLHLVKQRSD-
+          </div>
+
+          <p>
+            Afterwards we also ran the sequence through AlphaFold to receive its
+            expected 3D structure. As you can see in the pictures below, we
+            received, with an acceptable rate of certainty, especially given the
+            construct’s size, the following results(pLDDT:77.09 pTMscore:0.68):
+          </p>
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image4.png`} />
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image5.png`} />
+        </div>
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Interaction Prediction</h1>
+          <p>
+            In order to retrieve model confidence for our interaction, we use
+            the following equation proposed by Alphafold researchers of DeepMind
+            (Evans, Richard, Michael O’Neill, Alexander Pritzel, Natasha
+            Antropova, Andrew Senior, Tim Green, Augustin Žídek, et al. “Protein
+            Complex Prediction with AlphaFold-Multimer.” Cold Spring Harbor
+            Laboratory, October 4, 2021.
+            <a
+              class="link wrap"
+              href="https://doi.org/10.1101/2021.10.04.463034"
+              target="_blank"
+            >
+              https://doi.org/10.1101/2021.10.04.463034</a
+            >
+            )
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>model confidence = 0.8 &middot; ipTM + 0.2 &middot; pTM</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Our prediction model showcases somewhat of a probable interaction
+            yet all results from Alphafold 2-multimer should, according to the
+            creators, be taken with a grain of salt since their algorithm is
+            under development. Nonetheless, the model confidence of our
+            interaction is greater than 0.3 and at the time this bioinformatics
+            experiment was enough for us to continue with our wet lab
+            experiments.<br />The following model has an pLDDT score of 64.4, a
+            ptm score of 0.608 and an iptm score of 0.294 thus equating in a
+            model confidence of 0.3568 or 35.68%.
+          </p>
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image6.png`} />
+
+          <p>
+            One cannot overlook the fact that this structure seems odd at best
+            and has an extremely weak certainty level in the places that it is
+            somewhat expected(red color on the pLDDT diagram) . We believe that
+            by experimenting with the parameters of the Alphafold runs, and
+            given enough time, we can approximate the interaction more truly.
+          </p>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">False Positives Prediction</h1>
+          <p>
+            In order to calculate false positives we had to first pinpoint the
+            part of the aa sequence of the movement protein that interacts with
+            our synthetic protein. We performed this manually through PyMol.
+            Afterwards we performed a DALI analysis of our target protein
+            against the entire PDB database in order to locate proteins of a
+            similar tertiary structure, especially focusing on the interaction
+            site. Our greatest concern was whether the plant itself would have a
+            protein of similar structure that would interact with our engineered
+            protein with a higher affinity than ours would.<br /> We were extremely
+            happy to find that our structure had a somewhat unique structure against
+            all known PDB structures as you can see below:
+          </p>
+          <img class="big-img" src={`${ASSETS_URL}/images/modeling/image7.png`} />
+
+          <p>
+            Moreover we located all similarity points in the following proteins
+            and we did not pinpoint any similarities larger than 4 aa in a row
+            inside our interaction point of interest. Of course that does not
+            mean that proteins that are not on the PDB yet or have largely
+            different structures cannot and will not interact with our
+            construct. Our results nonetheless point us in the right direction.
+          </p>
+        </div>
+        <div id="part5" class="subpart scroll">
+          <h1 class="part-title">Primer Design</h1>
+          <p>
+            Throughout the year our team had to construct, edit or repurpose a
+            number of primers that are shortly presented below. All primers were
+            designed via various programmes and also tested in a <i
+              ><strong>in silico</strong>
+            </i> PCR with varying parameters for pre-experimental optimization
+          </p>
+          <h3><strong>OmpA</strong></h3>
+          <p>
+            The reconstruction of an iGEM construct to achieve N-terminal fusion
+            took place in order to be used in a standard golden gate
+            reaction.Primers were designed to acquire only the coding region of
+            OmpA for N-terminal fusion with Golden Gate cloning. One extra
+            adenine residue was added as an overhang to ensure the fusion
+            partner remains in frame.
+          </p>
+          <p class="wrap">
+            Fw: ttGGTCTCtAATGAAAGCTACTAAACTGGTA
+            <br />
+            Rev: ttGGTCTCtTCCTCCTCCAGAACCTCC
+            <br />
+            (Tm = 58 °C)
+          </p>
+          <h3><strong>NB-LRR</strong></h3>
+          <p>
+            The following primer sets were designed to acquire the NB-LRR domain
+            of the Sw-5b resistance gene for C-terminal fusion by Golden Gate
+            cloning
+          </p>
+          <p class="wrap">
+            Fw1: ttGGTCTCtAGGATTAAAACATCTGCCGGAT
+            <br />
+            <span style="text-decoration: underline;"
+              >Rev1: ttGGTCTCtAAGCTCA</span
+            >ATCTGAGCGTTGTTTG
+            <br />
+            (Tm=57°C)
+          </p>
+
+          <p class="wrap">
+            Fw2: ttGGTCTCtAGGACCTTCGGATTGGAAGGGA
+            <br />
+            <span style="text-decoration: underline;"
+              >Rev2: ttGGTCTCtAAGCTCA</span
+            >ATCTGAGCGTTGTTT
+            <br />
+            (Tm=58°C)
+          </p>
+          <h3><strong>OmpA:NB-LRR and OmpA:LRR</strong></h3>
+          <p>
+            The following primers were designed for the OmpA:NB-LRR and OmpA:LRR
+            constructs and include Ndel and Sacl recognition sites for cloning
+            into the expression vector pET-5b
+          </p>
+          <p class="wrap">
+            Fw1: ggCATATGatgAAAGCTACTAAACTGGTACTGG
+            <br />
+            Rv1: ggGAGCTCtcaATCTGAGCGTTGTTTGACG
+            <br />
+            (Tm=63 °C)
+          </p>
+          <p class="wrap">
+            Fw2: cgcCATATGAAAGCTACTAAACTGGTACTGG &nbsp; NdeI
+            <br />
+            Rev2: ccGAGCTCtcaATCTGAGCGTTGTTTGACG &nbsp; SacI
+            <br />
+            (Tm=63 °C)
+          </p>
+          <p>
+            In conclusion, our modeling work that took place throughout the year
+            with varying data and results (only the most representative are
+            presented), helped us strengthen our confidence in our project’s
+            success and provided useful data, especially concerning our target’s
+            structure that would otherwise remain unknown for some time. In due
+            time, crystallography structures and in vitro interaction assays can
+            either approve or disprove those results thus providing us with even
+            more data to continue our bioinformatics work.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  .big-img {
+    width: 80%;
+  }
+
+  .wrap-text {
+    max-width: 600px;
+    word-wrap: break-word;
+    font-size: 1rem;
+  }
+
+  .wrap {
+    word-wrap: break-word;
+  }
+
+  strong {
+    color: var(--blue-color);
+  }
+
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+
+  table {
+    width: fit-content;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .big-img {
+      width: 100%;
+    }
+  }
+
+</style>

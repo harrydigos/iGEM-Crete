@@ -1,0 +1,20 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "astro": "^1.1.2",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "phosphor-icons": "^1.4.2"
+  }
+}

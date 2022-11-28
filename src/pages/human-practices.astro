@@ -1,0 +1,703 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Human-Practices">
+  <Navbar activeNav="hp" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Silver Human Practices", id: "part1" },
+            subParts: [
+              { title: "Build a diverse team", id: "part2" },
+              { title: "Explore context", id: "part3" },
+              { title: "Brainstorm broadly", id: "part4" },
+              { title: "Document progress", id: "part5" },
+              { title: "Integrate insights", id: "part6" },
+              { title: "Closing the loop", id: "part7" },
+            ],
+          },
+
+          {
+            mainPart: { title: "Integrated", id: "part8" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Human Practices">
+        Human Practices
+      </div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h3 class="section-title">What are our values?</h3>
+          <p>
+            We based our choice of project in a set of values that characterize
+            our team as a whole. As here in Crete we are in constant touch with
+            nature, we prioritized the environment and tried to protect it in
+            many aspects. Inspired by the many endemic species of our island, we
+            focused on the maintenance of biodiversity, which will be possible
+            since by early tracing the infected plants, we can stop the
+            widespread of viruses and the protection of wildlife. Moreover, we
+            aimed at the conservation of resources which include the reduction
+            of the wasted food that could, and should, have been utilized. The
+            social and moral aspects of our project include the freedom that is
+            given to farmers acquired by being able to test their crops
+            themselves, the respect to the environment that our decade-long self
+            sustainable plan pays (it will be analyzed in the following
+            paragraph &rdquo;<strong
+              ><em
+                >Decision to Choose Conservation Track and how is it good for
+                the world?
+              </em>
+            </strong>&rdquo;), the accountability that we show to the future
+            users and the responsibility that characterizes our approach to
+            every aspect of the project. Furthermore, the equality among
+            countries is promoted as our kit will be affordable and ready to be
+            shipped in developing countries, reducing the food crisis by saving
+            enormous quantities of crops taking into consideration the reduction
+            of the food wasted, that could have been saved by early diagnosis.
+            Last, but not least, we believe that the communication and education
+            of the community should be a primary concern of every scientist,
+            since it allows the general public to understand and demystify the
+            inner values and dogmata of science. As for the scientific values,we
+            aspire the LRRs to be incorporated in the literature as a diagnostic
+            tool. We see them as an opportunity to revolutionize immunobiology
+            and can foresee their implementations paving the way to easier,
+            cheaper and more accurate diagnosis.
+          </p>
+          <div class="center"></div>
+        </div>
+        <div class="part scroll">
+          <h3 class="section-title">
+            Decision to Choose Conservation Track and how is it good for the
+            world?
+          </h3>
+          <p>
+            It is a common secret that humanity has devastated and trivialized
+            the environment unprecedentedly. Animal behavior disruption and
+            flora and fauna extinction are everyday phenomena and everyone
+            remains unbothered as long as their unceasing, humancentric lust is
+            satisfied. Humanity has undermined ecosystems both quantity- and
+            quality- wise, exploiting natural resources without a single intent
+            of reciprocity. Even though, recently, animal protection movements
+            are sprouting, the vital role of plants is often forgotten, leaving
+            them out of the equation. We forget, or even worse, we pretend not
+            to remember, that plants are the foundational organisms that enable
+            all others to exist, including humans. Especially humans. Such life
+            promoting, energy utilizing, peace and beauty inducing, climate
+            regulating, medicine implemented organisms should be appreciated and
+            be taken care of, in the most prolific way possible. We, as iGEM
+            Crete, believe that the solution lies in the field of synthetic
+            biology. A field that needs to be demystified, rather than being
+            taken by fear, as it is today. Its promising possibilities should be
+            the key to achieve efficient protection of the environment and an
+            eco-friendly way of living respectfully both to our great
+            &lsquo;home&rsquo; and to our friendly &lsquo;neighbors&rsquo;. We
+            deeply believe that there should be a universal implementation of
+            the tools that synthetic biology has to offer and that it is the
+            best, realistic way to preserve and to bequeath as beautiful an
+            environment as the one we inherited. After all, the planet is what
+            we all have in common.&nbsp;&nbsp;
+          </p>
+          <p>
+            A great problem that conservation efforts and policies face is how
+            to keep the biodiversity intact. Biodiversity can be limited both by
+            human and by non-human factors, such as phytopathogens. There have
+            been reported phytopathogens in forests and wild ecosystems. One of
+            them is TSWV as its spread maps pinpoint. A current theory suggests
+            that the cause of their spread is pollen of nearby crops or nearby
+            tossed crops. It is a problem that has to be addressed on its very
+            root, and that is exactly what we do with our diagnostic kit. It can
+            very fast and with very low cost, diagnose infected plants, thus
+            allowing us to reduce the phytopathogens in wild ecosystems.&nbsp;
+          </p>
+          <p>
+            &nbsp;Will this diagnostic tool be limited to TSWV? Or does it give
+            us the possibility of a massive phytopathogen diagnosis? Is there a
+            sustainable plan that will enable us to materialize our vision? Do
+            you have these questions? Because so did we, and that's how we came
+            up with our implementation plan (check it out!).
+          </p>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/img1.png`}
+            />
+          </div>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Build a diverse team</h1>
+          <p>
+            From its very early steps, this year&rsquo;s team was a diverse one
+            in terms of nationality, religion, sexuality and academic goals,
+            creating a comfortable and representative environment for everyone.
+            We embody different nationalities like Armenian, Pontic Greeks, but
+            also members of the lgbtq+ community and students of different
+            departments of the University of Crete. We have multireligious
+            members from all around Greece, with different mindsets and ways of
+            thinking and in a wide age window. All of the above established
+            polyphony and while we interchanged ideas, we made sure that all of
+            the opinions were not only heard, but thoroughly examined. Our
+            varying academic backgrounds allowed us to expand our project to a
+            wider extent while properly cooperating. Each one carried on the
+            work of the field in which he was better qualified, maximizing our
+            team&rsquo;s full potential. The biology students provided knowledge
+            in the lab and in communicating our project, reaching out to the
+            community, experts and potential sponsors. The computer science
+            students developed our amazing site and refined our graphics work
+            and our advisor aided with his knowledge in material science. All
+            this created an environment that promoted learning from one another
+            as the older students were always happy to transmit their knowledge
+            to the younger ones. Last but not least, it is noticeable that
+            equality was obtained not only among the members but also between
+            genders, as we consist of boys and girls in a ratio 1:1.
+          </p>
+        </div>
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Explore context</h1>
+          <p>
+            Our older members suggested that we should create a context for our
+            actions, in order to not deviate from our goals. By working in that
+            context, we ensured that we will be in touch with the community and
+            in harmony with the indispensable values, social, moral, scientific
+            and environmental ones. Our initiatives, scientific and community
+            related, were directed accordingly, helping us to maintain our
+            focus. We reached out to the community with numerous actions all
+            relevant with our project and our vision.
+          </p>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Brainstorm broadly</h1>
+          <p>
+            At the very beginning we conducted thorough research to find out
+            interesting literature and topics that express our interests. We
+            took into consideration our set of values, the needs of the local
+            community and matters of global interest and tried to find projects
+            that their implementation would fit all these criteria. We finally
+            chose our project as it incorporates all of the above, benefit for
+            our country and island, proaction of our ideals and address of
+            environmental issues that plague our planet’s sensitive ecosystems.
+            One thing that we could not get out of our minds was to eliminate
+            any possible harm that our project could potentially cause. That's
+            why we consulted bioethicists and local farmers in every step that
+            we made. We made sure that our project's impact will be only
+            beneficial.
+          </p>
+        </div>
+        <div id="part5" class="subpart scroll">
+          <h1 class="part-title">Document progress</h1>
+          <p>
+            One of our main pursuits was to ensure that none of our results was
+            biased. Early in the competition we decided that the documentation
+            of our every move could be extremely beneficial. By trial and error
+            we tried to learn from our mistakes and minimize them in the best
+            way possible! We managed to accomplish a successful documentation by
+            keeping a well organized and up to date calendar of our decisions
+            and actions. Weekly meetings were of significant meaning for our
+            team, because that is when the evaluation of each member took place.
+            Additionally, every once in a while we took a step back in order to
+            reassess the situation and make sure that our goals are compatible
+            with the current needs of society.
+          </p>
+        </div>
+        <div id="part6" class="subpart scroll">
+          <h1 class="part-title">
+            Integrate insights: Which communities did we consult to ensure that
+            our values are actually met?
+          </h1>
+          <p>
+            During our journey in the iGEM competition we consulted numerous
+            communities in order to ensure that our project meets our chosen
+            values and that it is beneficial and responsible to society.
+            Firstly, the support from our PIs was crucial, as they gave us
+            access to all the research facilities we required for the
+            development of our project, while they advised us in order to gain
+            an in-depth understanding of the factors that would affect the
+            design and application of our diagnostic in the field. We gathered
+            the thoughts and feedbacks and always carefully planned our next
+            steps with every consultation.&nbsp;
+          </p>
+          <p>
+            Another crucial pillar of our strategy for improving our initial
+            ideas was to meet with experts from specific scientific fields,
+            which aroused several discussions that would highlight significant
+            turning points or corroborate our plans. In order to do so we
+            consulted professors concerning plant protection, pathology and
+            virology. Also, a big concern of the Human Practices team was to
+            guarantee the assurance of our environmental, moral and society
+            values, which lead us to get in contact with the founding member and
+            Director of the Graduate Program "Bioethics", and Director of the
+            Bioethics Laboratory of the University of Crete, Professor Tsinorema
+            Stauroula.&nbsp;
+          </p>
+          <p>
+            Furthermore, we could not dismiss mutual consulting future
+            stakeholders of our novel technology. So we kept in contact with
+            students in the field of Agriculture and also leaders from small
+            communities that rely mostly on crops. We not only constantly
+            informed them about our results but also discussed and accepted
+            their proposals.&nbsp;
+          </p>
+          <p>
+            Finally, it was particularly important for us to create a network of
+            people who would help us clarify our ideas and ambitions regarding
+            our Human Practices planning. Thus, we were really thrilled to
+            participate in a series of Workshops organized by The Human
+            Practices Committee and iGEM Community Science Communication
+            Steering Group in order to get a better insight on how to properly
+            organize our work.
+          </p>
+          <h1 class="section-title">First Workshop:</h1>
+          <h3 class="section-title">
+            Human Practices Workshop: Science Communication in Human Practices
+          </h3>
+          <p>
+            In this webinar, we were trained by experts to familiarize ourselves
+            with the popularization of science and its closeness to the public.
+            We left this workshop full of knowledge and new ideas for the
+            interactive promotion of scientific research. This training played a
+            significant role in getting us closer to a successful
+            close-the-loop, through creating surveys with targeted content.
+            Other than that we enriched our future programming for the promotion
+            of the project through artistic creations and simple experiments
+            which we designed to achieve comprehensive communication and
+            education with the public.
+          </p>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/img2.jpeg`}
+            />
+          </div>
+          <h1 class="section-title">Second Workshop</h1>
+          <h3 class="section-title">
+            Product Design in Human Practices: Treasure Hunting in the Synbio
+            World
+          </h3>
+          <p>
+            After applying what we had learned in the prior seminar, we were
+            eager to improve our skills more and more! Since we had no idea what
+            the term "treasure hunting" is about , this workshop was extremely
+            informative to us. We received in-depth explanations of this
+            concept, and realized that creating a novel technology from scratch
+            is not simple at all! A distinct long-term vision is required. This
+            vision must be realistically feasible at a practical-lab-level but
+            also easy to use by the people to whom it is addressed. Finally, at
+            every stage of planning, moral values ​​should never be forgotten.
+          </p>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/img3.jpg`}
+            />
+          </div>
+          <h1 class="section-title">Third Workshop</h1>
+          <h3 class="section-title">
+            Maturity Model of Human Practices: How to Evaluate Your Progress on
+            Human Practices?
+          </h3>
+          <p>
+            As time passed and the workload grew, this last seminar came to the
+            rescue! Motivated by the Maturity Model Concept we created a Human
+            Practices Handbook, in which we compiled all of our past actions and
+            evaluated them one by one. This Handbook played a critical role in
+            our future Human Practices Implementation.
+          </p>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/img4.jpg`}
+            />
+          </div>
+        </div>
+        <div id="part7" class="subpart scroll">
+          <h1 class="part-title">
+            Closing the loop between what is designed and what is desired.
+          </h1>
+          <p>
+            At this point of the Human Practices cycle we decided to apply our
+            newly acquired knowledge from the first iGEM Workshop to try and
+            closing the loop between what is designed and what is desired.
+            Therefore we conducted some surveys in order to educe unbiased data
+            that would aid us comprehend the public's point of view regarding
+            our diagnostic tool. By doing so we could specifically target their
+            doubts and then extinguish them one by one!
+          </p>
+          <h3 class="section-title">Survey results</h3>
+          <p>
+            A survey was held and the link was forwarded to students of our
+            University. The topic in question was the awareness about the issue
+            of new diagnostics techniques.
+          </p>
+          <h4 class="section-title">
+            Would you be comfortable using a diagnostic that does not utilize
+            antibodies, but a &lsquo;secret&rsquo; protein?
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img1.png`}
+            />
+          </div>
+          <p>
+            72,2% of the participants declined the offer, as skepticism about
+            that unknown protein and the fear of its unforeseeable consequences
+            discourages them from using it.&nbsp;
+          </p>
+          <h4 class="section-title">
+            Would you be comfortable using a diagnostic that does not utilize
+            antibodies, but a &lsquo;secret&rsquo; protein if it was free?
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img2.png`}
+            />
+          </div>
+          <p>
+            68,5% of the participants answered that they would prefer it if it
+            was free. That indicates the current situation in Greece, that
+            multiple economic setbacks have resulted in prioritizing the
+            financial benefit over the unsure and unpredictable potential
+            danger.
+          </p>
+          <h4 class="section-title">
+            Would you be comfortable using a diagnostic that does not utilize
+            antibodies, but a &lsquo;secret&rsquo; protein if it was better,
+            though more expensive?
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img3.png`}
+            />
+          </div>
+          <p>
+            70,4% of the participants answered that they would not prefer it if
+            it was better, though more expensive. This is expected, as the
+            public can not afford taking the risk of such an investment, as they
+            do not have all the parts of the equation.&nbsp;&nbsp;
+          </p>
+          <h4 class="section-title">
+            Would you be comfortable using a diagnostic that does not utilize
+            antibodies, but the LRRs which you know are harmless for you and the
+            environment?&nbsp;
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img4.png`}
+            />
+          </div>
+          <p>
+            85,2% answered that they would utilize the LRRs. They are open to
+            use LRRs, because now we revealed that the &lsquo;secret&rsquo;
+            protein is harmless for them and the environment.
+          </p>
+          <h4 class="section-title">
+            Would you be comfortable using a diagnostic that does not utilize
+            antibodies, but the LRRs which you know are harmless for you and the
+            environment if the government supplied it for free/at a very low
+            price?&nbsp;&nbsp;
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img5.png`}
+            />
+          </div>
+          <p>
+            92,6% answered that they would prefer them at a lower price/for
+            free, something that we expected. This option combines both human
+            centric values such as the profit maximization and environmental
+            values such as the use of non perilous for the environment
+            techniques.&nbsp;
+          </p>
+
+          <h4 class="section-title">
+            Do you believe that the state should conduct campaigns to inform
+            citizens about new, better techniques in the fields of medicine and
+            immunobiology?
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/surveys-img6.png`}
+            />
+          </div>
+          <p>
+            40,7% answered negatively and the rest 59,3% positively. The
+            percentages are almost in balance even though the people that think
+            it is a good policy are slightly more.The ones that disagree occupy
+            a high percentage, which can be explained, by considering that such
+            campaigns consume state funds. They probably believe that such
+            information is too specific and that it should be acquired from
+            specialists individually.
+          </p>
+        </div>
+
+        <div id="part8" class="subpart scroll">
+          <h1 class="part-title">Integrated</h1>
+          <h3 class="section-title">Dionysia Athanasopoulou</h3>
+          <p>
+            One of the specialists in agriculture we had the pleasure to meet
+            with, was an agronomist Mrs. Dionysia Athanasopoulou. Mrs.
+            Athanasopoulou has experience in the greenhouse industry and is in
+            charge of one of Greece's biggest hydroponic tomato greenhouses. Our
+            discussion focused on the difficulties of modern greenhouse
+            industries to cope with plant pathogen infection. Specifically, even
+            industries that afford to obtain resistant hybrid plants with
+            increased productivity, are facing complications from
+            resistant-breaking pathogens.
+          </p>
+          <p>
+            Therefore, one of the crucial measures that they take upon
+            themselves is constant contact with specialists that inspect plants
+            on an everyday basis to secure healthy produce. In case of a
+            disease, they send samples to be tested and receive a diagnosis.
+            Additionally, Mrs. Athanasopoulou informed us about the difficulty
+            of distinguishing thrip bites, as they are commonly mistaken for
+            discoloration caused by sunlight. For this reason, she emphasized
+            the importance of an on-the-field diagnostic tool with immediate
+            results and was thrilled to be informed about our endeavors. She was
+            also keen on sending us samples of her plants for experimental
+            testing in the unfortunate event that she comes across TSWV. We
+            concluded our meeting mutually enthusiastic about the opportunity to
+            learn from one another and eager for future discussions.
+          </p>
+          <br />
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/photo1.png`}
+            />
+          </div>
+          <br />
+          <h3 class="section-title">Elisavet Chatzivasiliou</h3>
+          <p>
+            Mrs. Chatzivasiliou is one of the top scientists in Greece studying
+            TSWV. She is a perfect match for our project and was extremely
+            helpful and informative in our virtual meeting. We discussed various
+            aspects of our project and extracted useful information that we
+            integrated into our project to make it better and more efficient.
+            More specifically, she explained to us the significance of TSWV in
+            agriculture and its resurface in Greece and especially in Crete.
+          </p>
+          <p>
+            This phenomenon is a consequence of the appearance of resistant
+            breaking strains that neutralize the advantage of hybrid plants. She
+            also underlined the sensitivity of TSWV’s virions which are unstable
+            at 37 degrees Celcius and the importance of a rapid diagnostic tool
+            to be used in the field. The farming industry would be more
+            efficient given that early diagnosis of financially devastating
+            pathogens comes at a low cost. Another subject we covered was the
+            life cycle of thrips. Thrips are pests that are responsible for the
+            spread of TSWV and they transform into adults inside the soil. For
+            this reason, they are challenging to eliminate and pose a threat of
+            infection, so they require thorough disinsectization. In our closing
+            remarks, we underscored the superiority of early diagnosis instead
+            of the tedious process of eliminating virus carriers like thrips.
+          </p>
+          <br />
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/photo2.png`}
+            />
+          </div>
+          <br />
+          <h3 class="section-title">Stavroula Tsinorema</h3>
+          <p>
+            From the very beginning of our journey in the competition, our
+            initial goal was to introduce our moral values to the world as we
+            were strongly concerned about the issues regarding the bioethical
+            field around the globe. This is also one of the reasons that we were
+            all really keen to work on a project that contributes to the
+            minimization of the uneven distribution of resources in our planet.
+            We were very interested in getting the opinion of someone expert in
+            this area and see if our concerns were true. So we arranged a
+            meeting with Mrs.Stavroula Tsinorema, professor of Modern and Newer
+            Philosophy and Bioethics. This meeting left us deeply in awe as the
+            problem had a greater extent than we expected. Mrs Tsinorema
+            informed us that this field serves the autonomy of every human
+            being. Bioethics is the greatest servant of human freedom and this
+            is why legalizing bioethical rules ensures human freedom and acts as
+            a brake on anyone who attempts to violate it.
+          </p>
+          <br />
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/photo3.png`}
+            />
+          </div>
+          <br />
+          <h3 class="section-title">Zoe Pentheroudaki</h3>
+          <p>
+            Zoe is a molecular plant biologist and a PhD candidate. She has
+            worked the last two years on the interaction between viruses and
+            viroids. During our session with her we had the chance to talk about
+            TSWV as it was one of the virus she has intensively worked with.We
+            were able to gain great knowledge about different aspects of the
+            virus and how it can interact with viroids,where and how we can
+            extract it from the plants. Finally we were lucky enough to receive
+            guidance on potentially making our idea a start-up company after our
+            promising results.
+          </p>
+          <h3 class="section-title">Evangelos Makris</h3>
+          <p>
+            Another insightful meeting was made possible with the involvement of
+            Mr. Evangelos Makris, a specialized agronomist, and founder of
+            MakrisAgro agricultural company. Mr. Makris takes on cases from all
+            over Greece and especially in Crete. To our surprise, he was
+            amenable to research and communicating with other scientists to
+            gather statistics about TSWV. It was evident from our discussions
+            that the future of agriculture lies with a limited-pesticide
+            approach and is associated with prevention rather than inspection of
+            infection. This approach, which complies with the Green Deal,
+            contributes to the conservation of biological communities and the
+            environment as part of a circular economy. Moreover, the overbearing
+            and reckless usage of drastic substances has created an
+            uncontrollable situation of pesticide-tolerant pests.
+          </p>
+          <p>
+            Mr. Makris also gave us great intel about the farmers’ perspective
+            on diagnostic controls of their crops. Specifically, he informed us
+            about the hesitation to invite agronomists to check for infected
+            plants, in case it is decided to be put in quarantine. Therefore, he
+            welcomed the concept of our practical and affordable diagnostic test
+            and expressed his optimism about its prospects in future
+            applications. He emphasized that rapid diagnosis reduces production
+            costs and plays a significant part in a smooth transition to
+            eco-friendly agricultural practices. He also prompted us to adjust
+            our kit to be operational on the field and easy to use by
+            non-specialists. As our meeting was coming to an end, he advised us
+            to listen to the needs of farmers and not underestimate the
+            importance of prevention.
+          </p>
+          <br />
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style img-ratio-1"
+              width="60%"
+              src={`${ASSETS_URL}/images/human-practices/photo4.png`}
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+  .lists,
+  .sublists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  .img-grid {
+    display: flex;
+    gap: 1em;
+  }
+  strong {
+    color: var(--blue-color);
+  }
+  .img-grid img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 30%;
+  }
+  .img-style {
+    border-radius: 10px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  .overflow {
+    overflow-x: auto;
+  }
+  @media (max-width: 576px) {
+    .img-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-grid img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 576px) {
+    .responsive {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  @media (max-width: 420px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+</style>

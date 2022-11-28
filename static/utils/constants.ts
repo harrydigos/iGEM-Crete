@@ -1,0 +1,1 @@
+export const ASSETS_URL = 'https://static.igem.wiki/teams/4495/wiki';

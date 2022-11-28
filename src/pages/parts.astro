@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Parts">
+  <Navbar activeNav="labs" />
+  <div class="container page-without-sidebar">
+    <div class="big-main-title" data-content="Parts">Parts</div>
+    <div class="overflow">
+      <table class="parts-table">
+        <tbody>
+          <tr>
+            <td class="table-titles"><strong>Type</strong></td>
+            <td class="table-titles"><strong>Part Name</strong></td>
+            <td class="table-titles"><strong>Kind</strong></td>
+            <td class="table-titles"><strong>Description</strong></td>
+            <td class="table-titles"><strong>Length</strong></td>
+          </tr>
+          <tr>
+            <td>Basic</td>
+            <td>BBa_K4495000</td>
+            <td>Coding</td>
+            <td>NB-LRR Sw-5b</td>
+            <td>2190</td>
+          </tr>
+          <tr class="table-rows">
+            <td>Basic</td>
+            <td>BBa_K4495001</td>
+            <td>Coding</td>
+            <td>LRR Sw-5b</td>
+            <td>1089</td>
+          </tr>
+          <tr>
+            <td>Basic</td>
+            <td>BBa_K4495002</td>
+            <td>Coding</td>
+            <td>Nsm<sup>115-135</sup></td>
+            <td>66</td>
+          </tr>
+          <tr class="table-rows">
+            <td>Basic</td>
+            <td>BBa_K4495003</td>
+            <td>Coding</td>
+            <td>OmpA Surface Display Protein</td>
+            <td>456</td>
+          </tr>
+          <tr>
+            <td>Composite</td>
+            <td>BBa_K4495004</td>
+            <td>Coding</td>
+            <td>OmpA:NB-LRR</td>
+            <td>2652</td>
+          </tr>
+          <tr class="table-rows">
+            <td>Composite</td>
+            <td>BBa_K4495005</td>
+            <td>Coding</td>
+            <td>OmpA:LRR</td>
+            <td>1553</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bottom-footer">
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  .page-without-sidebar {
+    font-family: var(--second-font);
+    padding-top: calc(50px + 2em); /* 50px navbar + 2em padding */
+  }
+
+  .table-titles {
+    background-color: var(--coral-red-color);
+    width: fit-content;
+  }
+
+  .table-titles strong {
+    color: white;
+  }
+
+  .table-rows {
+    padding-left: 0.5em;
+    background-color: #fce7e9;
+  }
+
+  .parts-table {
+    width: 100%;
+    background-color: white;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .overflow {
+    overflow-x: auto;
+  }
+
+  td {
+    padding: 0.5em;
+    border: 2px solid #ffffff;
+  }
+
+  .bottom-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-width: 992px) {
+    .parts-table {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .parts-table {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-height: 1024px) {
+    .bottom-footer {
+      position: relative;
+    }
+  }
+</style>

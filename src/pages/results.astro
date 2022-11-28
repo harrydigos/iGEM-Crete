@@ -1,0 +1,301 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Results">
+  <Navbar activeNav="labs" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Introduction", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Preparation’s results", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Construct production results", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Final experiments results", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Results">Results</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Introduction</h1>
+          <p>
+            Results were divided into three categories, similar to the
+            experiments. More specifically, these categories are Preparation
+            results, Construct’s production/expression results, and Final
+            experiment results.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Preparation’s results</h1>
+          <ul>
+            <li class="lists">
+              We managed to amplify the preferred part (OmpA) from the 2021 iGEM
+              Distribution Kit. Due to the fact that we didn’t know the amount
+              of intact DNA in the kit, we tried multiple hypothetical
+              concentrations of OmpA. These were 2ng, 1ng and 0.5ng.
+              <br>
+              <div class="center">
+                <br>
+                <img
+                  id="img2"
+                  class="img-style"
+                  width="70%"
+                  src={`${ASSETS_URL}/images/results/image1.jpg`}
+                />
+              </div>
+              <br>
+            </li>
+            <li class="lists">
+              After also performing a PCR for LRR and NB-LRR we verified that we
+              indeed had the right constructs which were expected at 1089bp and
+              2190bp correspondingly.
+              <br>
+              <div class="center">
+                <br>
+                <img
+                  id="img2"
+                  class="img-style"
+                  width="70%"
+                  src={`${ASSETS_URL}/images/results/image2.jpg`}
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Construct production results</h1>
+          <ul>
+            <li class="lists">
+              After performing Golden Gate Cloning for pLCH86988:OmpA:LRR,
+              pLCH86988:OmpA:NB-LRR, and pLCH86988:Nsm<sup>115-135</sup>:YFP
+              assembly, we transformed <i><strong>E.coli</strong></i> cells, extracted
+              plasmid DNA and performed gel electrophoresis to see if we actually
+              have a plasmid.
+              <br>
+              <div class="center">
+                <br>
+                <img
+                  id="img2"
+                  class="img-style"
+                  width="70%"
+                  src={`${ASSETS_URL}/images/results/image3.jpg`}
+                />
+              </div>
+              <br>
+            </li>
+            <li class="lists">
+              Colony PCR was a success in amplifying our constructs.
+              <br>
+              <div class="center">
+                <br>
+                <img
+                  id="img2"
+                  class="img-style"
+                  width="70%"
+                  src={`${ASSETS_URL}/images/results/image4.jpg`}
+                />
+                <br>
+              </div>
+              <br>
+            </li>
+            
+            <li class="lists">
+              After the last cloning in which we assembled the constructs into
+              the expression vector, we did some restriction enzyme digestions
+              to verify that our constructs were right.
+              <br>
+              <div class="center">
+                <br>
+                <img
+                  id="img2"
+                  class="img-style"
+                  width="70%"
+                  src={`${ASSETS_URL}/images/results/image5.jpg`}
+                />
+                <br>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="part4" class="part scroll">
+          <h1 class="part-title">Final experiments results</h1>
+          <p>In our final experiment, we used 8 different samples.</p>
+          <p>
+            Samples 1I, 1II: <i><strong>E.coli</strong></i> surface displaying OmpA:LRR
+            (pET-2B:OmpA:LRR) from the first colony selected
+          </p>
+          <p>
+            Samples 2I, 2II: <i><strong>E.coli</strong></i> surface displaying OmpA:LRR
+            (pET-2B:OmpA:LRR) from the second colony selected
+          </p>
+          <p>
+            Samples NBI, NBII: <i><strong>E.coli</strong></i> surface displaying
+            OmpA:NB-LRR (pET-2B:OmpA:NB-LRR)
+          </p>
+          <p>
+            Sample Ctrl: Our negative control which is <i
+              ><strong>E.coli DH10b</strong>
+            </i> cells, not expressing anything
+          </p>
+
+          <p>
+            Sample PE: Total protein extract of <i
+              ><strong>N. Sylvestris</strong>
+            </i> leaves expressing the viral Nsm<sup>115-135</sup> protein.
+          </p>
+          <p>
+            Samples 1I, 1II, 2I, 2II, NBI, NBII, and Ctrl were incubated for 2
+            hours with the total protein extract of <i
+              ><strong>N. Sylvestris</strong>
+            </i>
+          </p>
+          <p>
+            After incubation time ended, we pelleted the cells, discarded the
+            supernatant, and washed the cells with PBS (2x). At the end of the
+            final wash, we resuspended the cells in dH<sub>2</sub>O.
+          </p>
+          <h4 class="section-title">
+            The last step was to place a drop of each sample (~4μL) between two
+            cover glasses and checked for fluorescence in a biomolecular imager.
+          </h4>
+          
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style"
+              width="70%"
+              src={`${ASSETS_URL}/images/results/image6.jpg`}
+            />
+          </div>
+          <h4 class="section-title">
+            <p>
+              In this picture, we can see the image of the way the samples were
+              placed in the biomolecular imager.
+            </p>
+          </h4>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style"
+              width="70%"
+              src={`${ASSETS_URL}/images/results/image7.jpg`}
+            />
+          </div>
+          <p>
+            This picture clearly shows that Fluorescence is clearly visible in
+            all of the test samples (smaller fluorescence in sample 2I). This
+            means that the cells bind the viral Nsm<sup>115-135</sup> protein fused
+            with YFP and so fluorescence is visible. A minimal fluorescent signal
+            is visible at the negative control probably due to the low-affinity binding
+            of some <i><strong>E.coli</strong></i> membrane protein with either YFP
+            or Nsm<sup>115-135</sup>.
+          </p>
+
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/protocols">Protocols</a>
+            </strong>
+          </p>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/experiments">Experiments</a>
+            </strong>
+          </p>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/proof-of-concept"
+                >Proof of concept</a
+              >
+            </strong>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+<style>
+  @import "../../static/styles/text-page.css";
+
+  ul {
+    font-size: 1.25rem;
+  }
+
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+  strong {
+    color: var(--blue-color);
+  }
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  .img-style {
+    border-radius: 10px;
+  }
+
+  .overflow {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 992px) {
+    #img1,
+    #img2 {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      font-size: 1rem;
+    }
+    #img2 {
+      width: 90%;
+    }
+  }
+  @media (max-width: 576px) {
+    #img2 {
+      width: 100%;
+    }
+  }
+</style>

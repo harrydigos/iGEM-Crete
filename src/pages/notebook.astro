@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Notebook">
+  <Navbar activeNav="labs" />
+  <div class="blend"></div>
+  <div class="container page-without-sidebar">
+    <div class="big-main-title" data-content="Notebook">Notebook</div>
+    <section class="parts-container">
+      <div class="subpart">
+        <h1 class="part-title">Week 1 (4-10 July)</h1>
+        <ul>
+          <li class="lists">Lab safety training</li>
+          <li class="lists">Lab sorting</li>
+          <li class="lists">Growth Media preparation</li>
+        </ul>
+      </div>
+
+      <div class="subpart">
+        <h1 class="part-title">Week 2 (11-17 July)</h1>
+        <ul>
+          <li class="lists">Primers receive and preparation</li>
+          <li class="lists">
+            Chemically competent <em><strong>E.coli</strong></em> and
+            <em><strong>Agrobacterium Tumefaciens</strong></em> preparation
+          </li>
+        </ul>
+      </div>
+
+      <div class="subpart">
+        <h1 class="part-title">Week 3 (18-24 July)</h1>
+        <ul>
+          <li class="lists">iGEM 2021 Distribution Kit troubleshooting</li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 4 (25-31 July)</h1>
+        <ul>
+          <li class="lists">OmpA PCR amplification&nbsp;</li>
+          <li class="lists">
+            Gel electrophoresis of OmpA PCR product and DNA purification
+          </li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 5 (1-7 August)</h1>
+        <ul>
+          <li class="lists">
+            PCR amplification of LRR, NB-LRR and Nsm<sup>115-135</sup>
+          </li>
+          <li class="lists">
+            Gel electrophoresis for LRR, NB-LRR and Nsm<sup>115-135</sup>
+          </li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 6 (8-14 August)</h1>
+        <ul>
+          <li class="lists">
+            Golden Gate Cloning to assemble pLCH86988:OmpA:LRR and
+            pLCH86988:OmpA:NB-LRR
+          </li>
+          <li class="lists">
+            Transformation of <em><strong>E.coli</strong></em> cells
+          </li>
+          <li class="lists">Plasmid DNA extraction and purification</li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 7 (22-28 August)</h1>
+        <ul>
+          <li class="lists">
+            Diagnostic restriction enzyme digestion and gel electrophoresis
+          </li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 8 (29 August - 4 September)</h1>
+        <ul>
+          <li class="lists">
+            Golden Gate Cloning to assemble pLCH86988:Nsm<sup>115-135</sup>:YFP
+          </li>
+          <li class="lists">
+            Transformation of
+            <em><strong>Agrobacterium Tumefaciens</strong></em>
+            cells
+          </li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 9 (5-11 September)</h1>
+        <ul>
+          <li class="lists">
+            Agroinfiltration of
+            <em><strong>Agrobacterium Tumefaciens</strong></em> into
+            <em><strong>N. Sylvestris leaves</strong></em>
+          </li>
+          <li class="lists">
+            Protein extraction from <em
+              ><strong>N. Sylvestris leaves</strong>
+            </em>
+          </li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 10 (12-18 September)</h1>
+        <ul>
+          <li class="lists">Colony PCR</li>
+          <li class="lists">PCR for OmpA:LRR and OmpA:NB-LRR</li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 11 (19-25 September)</h1>
+        <ul>
+          <li class="lists">Cloning with restriction enzymes</li>
+          <li class="lists">Cloning product clean-up</li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 12 (26 September - 2 October)</h1>
+        <ul>
+          <li class="lists">
+            Transformation of <em><strong>E.coli</strong></em> cells to surface display
+            the constructs
+          </li>
+          <li class="lists">Plasmid DNA extraction and purification</li>
+          <li class="lists">Restriction enzyme digestion</li>
+        </ul>
+      </div>
+      <div class="subpart">
+        <h1 class="part-title">Week 13 (3-9 October)</h1>
+        <ul>
+          <li class="lists">Final Experiment</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  ul {
+    font-size: 1.25rem;
+  }
+
+  .page-without-sidebar {
+    font-family: var(--second-font);
+    padding-top: calc(50px + 2em); /* 50px navbar + 2em padding */
+  }
+
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+
+  strong {
+    color: var(--blue-color);
+  }
+
+  @media (max-width: 768px) {
+    ul {
+    font-size: 1rem;
+  }
+  }
+
+</style>

@@ -1,0 +1,454 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Contribution">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Global Level", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Local Level", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Igem community", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Tips for future Teams", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Contribution">Contribution</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Global level contribution</h1>
+          <p>
+            We as a group were particularly troubled by the issue of global
+            inequity in the distribution of resources. We thus felt the need to
+            initiate bridging the enormous gap between developing and developed
+            nations. More precisely, we learned from the literature that
+            resistant tomato varieties, that are immune to TSWV, are imported,
+            particularly in nations with powerful economies. Unfortunately, the
+            virus has a high spreading rate which enables it to be transmitted,
+            endangering even wild ecosystems, while the destruction of crops by
+            viral phytopathogens plagues nations that are strongly affected by
+            poverty. All this could mean detrimental results for biodiversity.
+            Our diagnostic tool might thus rescue these crops and spare millions
+            of people from the tragedy of the food crisis in regions where
+            farmers are unable to afford to sustain resistant crops.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Local level contribution</h1>
+          <p>
+            Greece, a nation that relies heavily on tourism, has suffered severe
+            economic setbacks in recent years, particularly after the awful blow
+            of Covid-19, which had a huge impact on the general economy and also
+            on the agriculture industry. What&rsquo;s more, tomatoes are widely
+            consumed in Greece as they are a main ingredient of many foods of
+            the Mediterranean diet, consequently, they are cultivated in many
+            fields, gardens and greenhouses across the country, and especially
+            in Crete. Thus, even if the introduction of resistant variants has
+            been relatively active up until now, the financial recession
+            prevented an increasing number of farmers from raising such
+            varieties.
+          </p>
+          <p>
+            This is where our project provides a solution for farmers who have
+            suffered a financial setback and are unable to invest in resistant
+            varieties, allowing them to grow wild type tomatoes while still
+            being able to identify an infection efficiently and precisely. Its
+            low cost makes it appealing to even the smallest, part time
+            cultivator, who grows tomatoes for his family in his garden.
+          </p>
+          <p>
+            As we mention in our implementation proposal, the time-consuming and
+            expensive procedure of transporting the sample to the laboratory is
+            also avoided. Reducing the time needed to diagnose an infected
+            tomato can be vital for the rest of the field and neighboring
+            fields. The more tomatoes we save, the better the production and the
+            profit will be. In order to create breeding ground and make the
+            above happen, we directed our efforts in educating local farmers
+            about agrodiagnostics and raising awareness about tospoviruses and
+            the food crisis. They were amazed by how the utilization of our
+            project will shield them from the economic detrimmentation that TSWV
+            and economic crises co-created. We sincerely hope that we have
+            actively contributed in paving the way for a new era of diagnostics
+            utilizing LRRs. More details about our wet lab work are analyzed at
+            the last paragraph.
+          </p>
+        </div>
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">iGEM community contribution</h1>
+          <p>
+            Overall we wanted to embrace the goals of the competition and make
+            them our own.
+          </p>
+          <p>
+            We encouraged not only high school students but also university
+            students and teachers to familiarize themselves with the spirit of
+            the competition and to reflect on what an extraordinary life
+            experience their participation in the competition would be. In
+            addition, as we were incredibly excited to interact with so many
+            other iGEMTeams, we participated in a great number of
+            collaborations, which excited us so much that we decided to
+            establish a long-term and meaningful collaboration, which later
+            evolved into a partnership, with iGEM Thessaloniki. In this way, we
+            aspire to have done our bit to promote the spirit of mutual support
+            which is one of the main aims of the competition. Also, through our
+            constant communication with the public, we tried to make synthetic
+            biology the property of all and to spread the message that
+            scientific progress is not dangerous when it is accompanied by pure
+            purpose.
+          </p>
+          <p>
+            Moving on our team faced a plethora of problems during the
+            initiation and development of our project. Therefore we will
+            summarize some key problems we faced, that may potentially help
+            future iGEM teams overcome them.
+          </p>
+          <ul>
+            <li class="lists">
+              During the initial brainstorming sessions we considered using LRR
+              domains from VLR-B molecules, which originated from lampreys.
+              VLR-B molecules are responsible for the identification of epitopes
+              and antigens in lamprey's innate immunity. This idea brought some
+              obstacles to the surface, given the fact that we wanted to keep
+              our project bioethical and simultaneously free of any safety
+              concerns.
+              <br />
+              <ul>
+                <br />
+                <li class="sublists">
+                  Lampreys are critically endangered in Greece, so we decided to
+                  find an alternative to avoid immunizing lampreys and extract
+                  the lymphocytes to obtain the VLR-B molecules. We searched in
+                  bibliography and we found some articles that referred to
+                  experiments with a VLR library including all of lampreys’s
+                  VLR-B molecules. Unfortunately we couldn’t find a way to
+                  obtain this library.
+                </li>
+                <li class="sublists">
+                  Furthermore there was a lack of resources in our workplace to
+                  accomplish FACS and MACS experiments which were necessary for
+                  the experimental procedures.
+                </li>
+              </ul>
+            </li>
+            <br />
+            <li class="lists">
+              To overcome these difficulties we concluded using LRR domains
+              isolated from <em>Solanum Peruvianum</em> and specifically the LRR
+              and the NB-LRR from the Sw-5b resistance gene. This gene confers resistance
+              against some tospoviruses such as <em
+                >Tomato Spotted Wilt Virus (TSWV)</em
+              >.
+            </li>
+            <br />
+            <li class="lists">
+              The first idea was to surface display the LRR from Sw-5b on <em
+                >E.coli
+              </em>cells by fusing it with the Fc domain of an IgG antibody.
+              Sadly we couldn&rsquo;t obtain a vector containing this construct
+              in time. So the concept of the project ended up into using a
+              surface display protein included in iGEM 2022 Distribution Kit.
+              <br />
+              <ul>
+                <br />
+                <li class="sublists">
+                  The first idea was to surface display the LRR from Sw-5b on <em
+                    >E.coli
+                  </em>cells by fusing it with the Fc domain of an IgG antibody.
+                  Sadly we couldn&rsquo;t obtain a vector containing this
+                  construct in time. So the concept of the project ended up into
+                  using a surface display protein included in iGEM 2022
+                  Distribution Kit.
+                </li>
+                <br />
+                <li class="sublists">
+                  The last thing we expected was for the Distribution Kit to be
+                  stopped at the customs office in Greece and returned back to
+                  iGEM HQ. In this rampage of bad luck we had to end up with a
+                  new alternative, so we decided to use an OmpA surface display
+                  protein for <em>E.coli</em>cells included in the 2021 iGEM
+                  Distribution Kit.
+                </li>
+                <br />
+                <li class="sublists">
+                  Unfortunately, the 2021 iGEM Distribution Kit we had was
+                  stored for one year in room temperature as the DNA parts into
+                  the wells had creosol red dye which stabilized them in room
+                  temperature. To be completely sure that the transformation of
+                  our part of interest will be a success, we tried several other
+                  parts included in the kit first. Failure after failure while
+                  checking all of the parameters for the transformation we drew
+                  the conclusion that the problem was the DNA in the kit. We had
+                  only one chance for our part of interest, so we decided to
+                  isolate it using PCR, without trying to first transform
+                  competent <strong><em>E.coli</em></strong> cells and this was finally
+                  a huge success.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h3 class="section-title"></h3>
+          <p>
+            For this year&rsquo;s iGEM competition we not only registered new
+            parts, but also improved a part already registered from previous
+            iGEMers.&nbsp;
+          </p>
+          <p>The basic parts we registered include:</p>
+
+          <ul>
+            <li class="lists">
+              LRR Sw-5b: This part is a gene which expresses the LRR domain of
+              the Sw5b resistance gene of Solanum Peruvianum and naturally gives
+              resistance against some tospoviruses.
+            </li>
+            <li class="lists">
+              NB-LRR Sw-5b: This is a part that is basically the LRR with both
+              the NB domain. This part is enrolled in the same defense mechanism
+              of Solanum Peruvianum as the previous part.
+            </li>
+            <li class="lists">
+              Nsm<sup>115-135</sup>: It&rsquo;s a viral protein that during
+              infection contributes to viral cell to cell movement and
+              translocates to nearby cells before other viral components reach
+              them. It is a gene sequence from several tospovirus species.
+            </li>
+          </ul>
+          <p>
+            The part we modified is BBa_K1362060 registered by iGEM Heidelberg
+            in iGEM 2014 competition and it is the following:
+          </p>
+          <ul>
+            <li class="lists">
+              OmpA Surface Display Protein: It is a bacterial protein that is
+              used to surface display any protein of interest when N-terminally
+              fused in E.coli. Our protein is a modified version of BBa_K1362060
+              with an extra nucleotide that ensures that our fusion partner
+              remains in frame.
+            </li>
+          </ul>
+          <p>Lastly we also registered a couple of composite parts:</p>
+          <ul>
+            <li class="lists">
+              OmpA:NB-LRR: Which is a fusion of OmpA surface display protein and
+              the NB-LRR
+            </li>
+            <li class="lists">
+              OmpA:LRR: This also our OmpA surface displayed protein fused with
+              the LRR
+            </li>
+          </ul>
+          <div class="overflow">
+            <table class="parts-table">
+              <tbody>
+                <tr>
+                  <td class="table-titles"><strong>Type</strong></td>
+                  <td class="table-titles"><strong>Part Name</strong></td>
+                  <td class="table-titles"><strong>Kind</strong></td>
+                  <td class="table-titles"><strong>Description</strong></td>
+                  <td class="table-titles"><strong>Length</strong></td>
+                </tr>
+                <tr>
+                  <td>Basic</td>
+                  <td>BBa_K4495000</td>
+                  <td>Coding</td>
+                  <td>NB-LRR Sw-5b</td>
+                  <td>2190</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Basic</td>
+                  <td>BBa_K4495001</td>
+                  <td>Coding</td>
+                  <td>LRR Sw-5b</td>
+                  <td>1089</td>
+                </tr>
+                <tr>
+                  <td>Basic</td>
+                  <td>BBa_K4495002</td>
+                  <td>Coding</td>
+                  <td>Nsm<sup>115-135</sup></td>
+                  <td>66</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Basic</td>
+                  <td>BBa_K4495003</td>
+                  <td>Coding</td>
+                  <td>OmpA Surface Display Protein</td>
+                  <td>456</td>
+                </tr>
+                <tr>
+                  <td>Composite</td>
+                  <td>BBa_K4495004</td>
+                  <td>Coding</td>
+                  <td>OmpA:NB-LRR</td>
+                  <td>2652</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Composite</td>
+                  <td>BBa_K4495005</td>
+                  <td>Coding</td>
+                  <td>OmpA:LRR</td>
+                  <td>1553</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Tips for future iGEM Teams</h1>
+          <p>
+            At the beginning when the group was created, we were all very happy
+            that this year we would be able to spend quality time as a group,
+            since most of the measures for the pandemic had already been lifted.
+            Thus, we prioritized the solid foundation of our relationship,
+            setting two weekly meetings. In these meetings we brainstormed for
+            our future work, but we also exchanged our news and generally bonded
+            as this is the most important stage for a successful and efficient
+            teamwork. Specifically, at the HP level, we sought for an external
+            unofficial &lsquo;&lsquo;judge&rsquo;&rsquo; to evaluate our work.
+            Attending a series of workshops held by the iGEM community aided us
+            to a great extent to achieve this goal. We were trained both in the
+            approach to properly reach all age groups and in setting our future
+            goals in order to assist the world overcome its fear towards an
+            innovative, unknown method of diagnosis which does not use
+            antibodies.
+          </p>
+          <p>
+            Regarding our fund team&rsquo;s experience, we would advise future
+            teams to start looking for sponsors early in the competition,
+            offering them a simple but comprehensive update of the project so
+            far. The consistent availability and immediate responses build a
+            trustworthy image of the team to the outside world.
+          </p>
+          <p>
+            Regarding our wet lab&rsquo;s experience, we acquired knowledge and
+            a better understanding about the competition and the experimental
+            procedures. Thus, we would like to advise future iGEM teams on some
+            more of the issues we encountered. Firstly, it would be helpful to
+            set a common course and goal that resonates with the whole team and
+            try to stay on track throughout the competition. During
+            brainstorming we found it useful to research separately different
+            project ideas and present them to the team for critical suggestions
+            and improvements.
+          </p>
+          <p>
+            After we concluded our final project, the wet lab members scheduled
+            weekly meetings to assess and check on the progress on individual
+            tasks assigned to each member. Before starting your project, be
+            certain to obtain your iGEM distribution kits, even if you think
+            that they contain parts that are not useful for your experiments. It
+            is possible that you will need to adjust your protocols if something
+            does not work. Overall the innovative idea of ​​introducing a new
+            diagnostic method to the scientific community required a thorough
+            literature search, as well as a long-term plan of the experimental
+            procedure that we will pursue.
+          </p>
+          <p>
+            Finally, without a comprehensive and well-designed wiki, none of the
+            aforementioned would be available to the public and future iGEM
+            teams. According to the dry lab, the wiki page was implemented
+            utilizing the new Astro javascript framework, which creates faster
+            websites withnext-generation island architecture. The created wiki
+            complies with the requirements of a well-designed responsive website
+            for mobile and tablet devices. Lastly, the written code and design
+            can be applied to the creation of the following wikis.
+          </p>
+          <h4 class="section-title">
+            We hope that the future iGEM teams will benefit from our mishaps and
+            proceed to a smoother project execution!
+          </h4>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+  .lists,
+  .sublists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+  .sublists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    outline: 3px var(--coral-red-color) solid;
+    outline-offset: -2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+  .table-titles {
+    background-color: var(--coral-red-color);
+    width: fit-content;
+  }
+
+  .table-titles strong {
+    color: white;
+  }
+
+  .table-rows {
+    padding-left: 0.5em;
+    background-color: #fce7e9;
+  }
+
+  .parts-table {
+    background-color: white;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .overflow {
+    overflow-x: auto;
+  }
+  td {
+    padding: 0.5em;
+    border: 2px solid #ffffff;
+  }
+
+  @media (max-width: 576px) {
+    .parts-table {
+      font-size: 0.8rem;
+    }
+  }
+</style>

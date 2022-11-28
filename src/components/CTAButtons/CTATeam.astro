@@ -1,0 +1,133 @@
+---
+export interface CTATeamButton {
+  text: string;
+  links: Socials;
+  bgColor: string;
+  textColor: string;
+}
+
+type Socials = {
+  instagram: string;
+  facebook: string;
+  linkedin: string;
+};
+
+const { text, links, bgColor, textColor } = Astro.props as CTATeamButton;
+---
+
+<button class="follow-us-btn">
+  <span>{text}</span>
+  <ul>
+    <li>
+      <a href={`${links.instagram}`} target="_blank">
+        <i class="ph-instagram-logo"></i>
+      </a>
+    </li>
+    <li>
+      <a href={`${links.facebook}`} target="_blank">
+        <i class="ph-facebook-logo"></i>
+      </a>
+    </li>
+    <li>
+      <a href={`${links.linkedin}`} target="_blank">
+        <i class="ph-linkedin-logo"></i>
+      </a>
+    </li>
+  </ul>
+</button>
+
+<style define:vars={{ bgColor, textColor }}>
+  .follow-us-btn {
+    width: fit-content;
+    position: relative;
+    padding: 1.125em 2.25em;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--textColor);
+    background: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border-radius: 2.5em;
+    filter: drop-shadow(0 2px 8px #d904272a);
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .follow-us-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--bgColor);
+    border-radius: 2.5em;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .follow-us-btn span {
+    display: inline-flex;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-delay: 0.05s;
+  }
+
+  .follow-us-btn ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0;
+    padding: 1.125em 2.25em;
+    list-style-type: none;
+    transform: translateY(-50%);
+  }
+
+  .follow-us-btn ul li {
+    flex: 1;
+  }
+
+  .follow-us-btn ul li a {
+    display: inline-flex;
+    vertical-align: middle;
+    transform: translateX(250px);
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    color: white;
+    font-size: 1.75rem;
+  }
+
+  .follow-us-btn:hover span {
+    transform: translateX(-250px);
+  }
+
+  .follow-us-btn:hover ul li a {
+    transform: translateY(0);
+  }
+
+  .follow-us-btn ul li a:hover {
+    transition: none;
+    opacity: 0.75;
+  }
+
+  .follow-us-btn:hover ul li:nth-child(1) a {
+    transition-delay: 0.15s;
+  }
+
+  .follow-us-btn:hover ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+
+  .follow-us-btn:hover ul li:nth-child(3) a {
+    transition-delay: 0.45s;
+  }
+
+  @media (max-width: 576px) {
+    .follow-us-btn {
+      font-size: 1rem;
+    }
+  }
+</style>

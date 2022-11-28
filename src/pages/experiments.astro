@@ -1,0 +1,252 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Experiments">
+  <Navbar activeNav="labs" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Introduction", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Preparation", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Production-Expression", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Final experiment", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Experiments">Experiments</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Introduction</h1>
+          <p>
+            Our 2022 project had a wide variety of demanding experimental
+            procedures which were successfully carried out. These procedures can
+            be divided in three main categories: Preparation, Construct&rsquo;s
+            production/expression and Final experiment.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Preparation</h1>
+          <p>
+            During the preparation stage, we had to do all the work for the
+            initiation of our main experiments.
+          </p>
+          <ul>
+            <li class="lists">
+              Preparation of the necessary solid and liquid growth media.
+            </li>
+            <li class="lists">
+              <p>
+                Preparations of chemically competent <em
+                  ><strong> E.coli DH10b</strong>
+                </em>and <em
+                  ><strong> Agrobacterium Tumefaciens C58C1</strong>
+                </em>cells.
+              </p>
+            </li>
+            <li class="lists">
+              Preparation and aliquoting of primers for our main parts: OmpA,
+              Nsm<sup>115-135</sup>, LRR, NB-LRR and OmpA:LRR/OmpA:NB-LRR.
+            </li>
+            <li class="lists">
+              <p>
+                Inspection of the 2021 iGEM Distribution Kit for DNA quality and
+                failed attempts to transform competent <em
+                  ><strong> E.coli</strong>
+                </em>cells (probably due to inappropriate storing conditions)
+              </p>
+            </li>
+            <li class="lists">
+              PCR to amplify our preferred part (OmpA) right from iGEM&rsquo;s
+              2021 Distribution Kit
+            </li>
+            <li class="lists">
+              Gel Electrophoresis to verify that we multiplied OmpA and DNA
+              purification
+            </li>
+            <li class="lists">
+              PCR to amplify LRR, NB-LRR and Nsm<sup>115-135</sup> genes.
+            </li>
+            <li class="lists">
+              Gel Electrophoresis for LRR, NB-LRR and Nsm<sup>115-135</sup> genes.
+            </li>
+          </ul>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Constructs's production-expression</h1>
+          <p>
+            In this experimental stage, our main goal was to gather all of the
+            constructs that were needed in the final experiment
+          </p>
+          <ul>
+            <li class="lists">
+              Golden Gate Cloning to assemble OmpA:LRR and OmpA:NB-LRR
+              constructs to pLCH86988
+            </li>
+            <li class="lists">
+              <p>
+                Transformation of pLCH86988:OmpA:LRR and pLCH86988:OmpA:NB-LRR
+                into <em><strong> E.coli DH10b</strong></em>cells
+              </p>
+            </li>
+            <li class="lists">
+              <p>Plasmid DNA extraction and purification</p>
+            </li>
+            <li class="lists">
+              <p>
+                Diagnostic restriction enzyme digestion and gel electrophoresis
+              </p>
+            </li>
+            <li class="lists">
+              <p>
+                Golden Gate Cloning to assemble Nsm<sup>115-135</sup>:YFP to
+                pLCH86988
+              </p>
+            </li>
+            <li class="lists">
+              <p>
+                Transformation of pLCH86988:Nsm<sup>115-135</sup>:YFP into <em
+                  ><strong> Agrobacterium Tumefaciens C58C1</strong>
+                </em>cells
+              </p>
+            </li>
+            <li class="lists">
+              <p>
+                Agroinfiltration of <em
+                  ><strong> Agrobacterium Tumefaciens C58C1</strong>
+                </em>cells with pLCH86988:Nsm<sup>115-135</sup>:YFP to <em
+                  ><strong> N. Sylvestris</strong>
+                </em>
+              </p>
+            </li>
+            <li class="lists">
+              <p>
+                Protein extraction from <em
+                  ><strong>N. Sylvestris leaves</strong>
+                </em>
+              </p>
+            </li>
+            <li class="lists"><p>Colony PCR for all constructs</p></li>
+            <li class="lists">
+              <p>PCR to amplify OmpA:LRR and OmpA:NB-LRR</p>
+            </li>
+            <li class="lists">
+              <p>
+                Cloning with restriction enzymes SacI and NdeI to assemble
+                pET-2B:OmpA:LRR and pET-2B:OmpA:NB-LRR
+              </p>
+            </li>
+            <li class="lists"><p>Cloning product clean-up</p></li>
+            <li class="lists">
+              <p>
+                Transformation of pET-2B:OmpA:LRR and pET-2B:OmpA:NB-LRR into<em
+                  ><strong> E.coli DH10b</strong>
+                </em>cells
+              </p>
+            </li>
+            <li class="lists">
+              <p>Plasmid DNA extraction and purification</p>
+            </li>
+            <li class="lists">
+              <p>Restriction enzyme digestion and gel electrophoresis</p>
+            </li>
+          </ul>
+        </div>
+        <div id="part4" class="part scroll">
+          <h1 class="part-title">Final experiment</h1>
+          <p>
+            This is our last experiment and essentially the one that will
+            determine the success of our project.
+          </p>
+          <ul>
+            <li class="lists">
+              <p>
+                Incubation of <em><strong> E.coli</strong></em> cells surface displaying
+                OmpA:NB-LRR and OmpA:LRR with protein extract from <em
+                  ><strong> Benthamiana</strong>
+                </em>leaves expressing Nsm115-135:YFP for 10 min, 20
+              </p>
+            </li>
+            <li class="lists">Cell washes with BS (2x)</li>
+            <li class="lists">
+              Cell testing for fluorescence in biomolecular imager, indicating
+              binder efficacy.
+            </li>
+          </ul>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/protocols">Protocols</a>
+            </strong>
+          </p>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/results">Results</a>
+            </strong>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+<style>
+  @import "../../static/styles/text-page.css";
+
+  ul {
+    font-size: 1.25rem;
+  }
+
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+  strong {
+    color: var(--blue-color);
+  }
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  @media (max-width: 768px) {
+    ul {
+      font-size: 1rem;
+    }
+  }
+</style>

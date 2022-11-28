@@ -1,0 +1,114 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Loader from "../components/Loader.astro";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${ASSETS_URL}/faviconcrete.svg`}
+    />
+    <meta name="generator" content={Astro.generator} />
+    <script>
+      import { initCanvas } from "../../static/utils/Canvas";
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loader-wrapper").style.display = "none";
+          document.querySelector("body").classList.remove("no-scroll");
+
+          if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(
+              navigator.userAgent
+            )
+          ) {
+            console.log("mobile");
+          } else {
+            console.log("desktop");
+            initCanvas("#gradient-canvas");
+          }
+        }, 500);
+      });
+    </script>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <style is:global>
+      @import "../../static/styles/global.css";
+      @import "../../static/styles/locomotive.css";
+      @import "../../static/styles/fonts.css";
+    </style>
+
+    <title>{title}</title>
+  </head>
+  <body class="no-scroll">
+    <div id="loader-wrapper">
+      <Loader client:load />
+    </div>
+    <div class="background">
+      <canvas id="gradient-canvas" data-transition-in></canvas>
+      <div class="bg-img"></div>
+    </div>
+    <slot />
+    <style>
+      .no-scroll {
+        overflow: hidden;
+      }
+
+      #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -15;
+      }
+
+      .background .bg-img {
+        background-image: url("https://static.igem.wiki/teams/4495/wiki/images/background.png");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #gradient-canvas {
+        width: 100%;
+        height: 100%;
+        --gradient-color-1: #c1e1e2;
+        --gradient-color-2: #ff9e9e;
+        --gradient-color-3: var(--cream-green-color);
+        --gradient-color-4: #ffffff;
+      }
+
+      @media (max-width: 992px) {
+        #gradient-canvas {
+          display: none;
+        }
+      }
+    </style>
+  </body>
+</html>

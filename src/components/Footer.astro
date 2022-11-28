@@ -1,0 +1,221 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+---
+
+<footer class="full-container">
+  <div class="container">
+    <div class="footer-container">
+      <div class="logo-container">
+        <a href="/crete" class="logo">
+          <img src={`${ASSETS_URL}/images/logo/igemcretelogo.svg`} />
+          <div>
+            <span style="color: var(--dark-blue-color)">iGEM</span>CRETE
+          </div>
+        </a>
+        <img class="uoc-img" src={`${ASSETS_URL}/images/sponsors/uoc.png`} />
+      </div>
+
+      <div class="footer-content">
+        <div class="menu">
+          <div class="footer-title">Menu</div>
+          <p>
+            <a class="link" href="/crete">Home</a>
+            <a class="link" href="/crete/description">Project</a>
+            <a class="link" href="/crete/experiments">Wet Lab</a>
+            <a class="link" href="/crete/human-practices">Human Practices</a>
+            <a class="link" href="/crete/members">Team</a>
+          </p>
+        </div>
+        <div class="location">
+          <div class="footer-title">Location</div>
+          <p>
+            Department of Biology <br />
+            University of Crete <br />
+            Heraklion 70013 <br />
+            Greece
+          </p>
+        </div>
+
+        <div class="social">
+          <div class="footer-title">Social</div>
+          <div class="social-icons">
+            <a
+              class="link"
+              href="https://www.instagram.com/igemcrete/"
+              target="_blank"
+            >
+              <i class="ph-instagram-logo-bold"></i>
+            </a>
+            <a
+              class="link"
+              href="https://www.facebook.com/igemcrete"
+              target="_blank"
+            >
+              <i class="ph-facebook-logo-bold"></i>
+            </a>
+            <a
+              class="link"
+              href="https://www.linkedin.com/company/igem-crete/"
+              target="_blank"
+            >
+              <i class="ph-linkedin-logo-bold"></i>
+            </a>
+            <a
+              class="link"
+              href="https://gitlab.igem.org/2022/crete"
+              target="_blank"
+            >
+              <i class="ph-gitlab-logo-simple-bold"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="license">
+      Content on this site is licensed under a
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        Creative Commons Attribution 4.0 International license.</a
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  .license {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .license a {
+    color: var(--dark-blue-color);
+  }
+
+  .license a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    position: relative;
+    font-family: var(--main-font);
+    color: var(--dark-blue-color);
+    font-size: 1.125rem;
+    font-family: var(--main-font-medium);
+    background: white;
+    padding-top: 6em;
+    background: linear-gradient(0deg, white 0%, white 50%, transparent 100%);
+  }
+
+  .footer-container {
+    display: flex;
+    padding: 2em 0em;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-family: var(--main-font-bold);
+    font-size: 1.5rem;
+    color: var(--coral-red-color);
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  .uoc-img {
+  }
+
+  .footer-content {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-title {
+    font-size: 1.25rem;
+    font-family: var(--main-font-bold);
+    text-transform: uppercase;
+    padding-bottom: 1em;
+  }
+
+  .contact-content {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  .contact-content i {
+    font-size: 1.25rem;
+  }
+
+  .menu p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 0;
+  }
+
+  .menu p a {
+    color: var(--dark-blue-color);
+    width: fit-content;
+  }
+
+  .location p,
+  .contact p {
+    white-space: nowrap;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.75rem;
+  }
+
+  .link {
+    color: var(--dark-blue-color);
+  }
+
+  .link:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 992px) {
+    .footer-container {
+      flex-direction: column;
+      row-gap: 1em;
+    }
+
+    .logo-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-content {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+    .footer-container {
+      padding: 1em;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      row-gap: 1em;
+    }
+  }
+</style>

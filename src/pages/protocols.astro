@@ -1,0 +1,791 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Protocols">
+  <Navbar activeNav="labs" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Competent E. coli", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Agrobacterium cells", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "E. coli Transformation", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Tumefacien transformation", id: "part4" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Isolation of plasmid DNA", id: "part5" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Agroinfiltration", id: "part6" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Golden Gate Cloning", id: "part7" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "A-tailing", id: "part8" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Ligation of A-tailed", id: "part9" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Colony PCR", id: "part10" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "High Fidelity PCR", id: "part11" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Restriction Digestions", id: "part12" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Protocols">Protocols</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Chemically competent E. coli cells</h1>
+          <p>Day1:</p>
+          <ul>
+            <li class="lists">
+              Streak <um><strong>E.coli DH10B</strong></um> on solid LB medium and
+              incubate overnight at 37℃
+            </li>
+          </ul>
+          <p>Day2:</p>
+          <ul>
+            <li class="lists">
+              Pick up a single colony from the solid culture and start a 10mL
+              liquid LB culture and grow overnight at 37℃
+            </li>
+            <li class="lists">
+              Prepare the stock solutions for Day 3 → 5M CH3COOK, 1M MnCl2*4H2O,
+              1M CaCl2*2H2O, 1M MOPS
+            </li>
+          </ul>
+          <p>Day3:</p>
+          <ul>
+            <li class="lists">
+              Add 2.5mL from the liquid culture in a 2L flask with 250mL liquid
+              LB and incubate at 37℃ until OD600=0.5-0.6 (~3h)
+              <br />
+              <div class="overflow">
+                <br />
+                <table class="parts-table">
+                  <tbody>
+                    <tr>
+                      <td class="table-titles"
+                        ><strong>TFBI (pH=5.8)</strong>
+                      </td>
+                      <td class="table-titles"
+                        ><strong>TFBII (pH=6.5)</strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>CH3COOK 30mM</td>
+                      <td>MOPS 10mM</td>
+                    </tr>
+                    <tr class="table-rows">
+                      <td>RbCl 100mM</td>
+                      <td>CaCl2*2H2O 75mM</td>
+                    </tr>
+                    <tr>
+                      <td>MnCl2 10mM</td>
+                      <td>RbCl 10mM</td>
+                    </tr>
+                    <tr class="table-rows">
+                      <td>CaCl2*2H2O 10mM</td>
+                      <td>Glycerol 15%</td>
+                    </tr>
+                    <tr>
+                      <td>Glycerol 15%</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+              </div>
+              <p>
+                For every 50mL culture we need 15mL TFBI and 2mL TFBII, so in
+                our case we need 75mL TFBI and 10mL TFBII.
+              </p>
+            </li>
+            <li class="lists">
+              When the culture is ready split it in 50mL Falcon tubes and pellet
+              cells at 2500rpm for 10min (4℃)
+            </li>
+            <li class="lists">
+              Discard the supernatant and resuspend in 15mL TFBI in each tube
+            </li>
+            <li class="lists">Rest on ice for 30min</li>
+            <li class="lists">
+              Pellet cells, discard the supernatant and resuspend in 2mL TFBII
+            </li>
+            <li class="lists">
+              Aliquot 100μL cells in 1.5ml Eppendorf tubes and freeze it
+              immediately in liquid nitrogen
+            </li>
+            <li class="lists">Store aliquots at -80℃</li>
+          </ul>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Competent Agrobacterium Tumefaciens cells</h1>
+          <p>
+            The creation of competent <em
+              ><strong>Agrobacterium Tumefaciens</strong>
+            </em>cells is a 5-day procedure. In our case the <em
+              ><strong>Agrobacterium Tumefaciens</strong>
+            </em>strain we use is <em><strong>C58C1.</strong></em>
+          </p>
+          <p>Day 1</p>
+          <ul>
+            <li class="lists">
+              Streak the preferred <strong
+                ><em>Agrobacterium Tumefaciens</em>
+              </strong>strain on solid LB medium with rifamycin (50&mu;g/mL)
+            </li>
+            <li class="lists">Incubate for 2 days at 28℃ in dark</li>
+          </ul>
+          <p>Day 3</p>
+          <ul>
+            <li class="lists">
+              Pick up a single colony and start a 5mL liquid culture in LB with
+              rifamycin (50μg/mL)
+            </li>
+            <li class="lists">
+              Incubate (shaking) at 28℃ until saturation (overnight)
+            </li>
+          </ul>
+          <p>Day 4</p>
+          <ul>
+            <li class="lists">
+              Add 100μL of the saturated culture in a 2L flask with 200mL of LB
+              with rifamycin (50μg/mL)
+            </li>
+            <li class="lists">Incubate (shaking) overnight at 28℃</li>
+          </ul>
+          <p>Day 5</p>
+          <ul>
+            <li class="lists">Measure OD<sub>600</sub> (should be ~0.8-1)</li>
+            <li class="lists">
+              Split culture in 50mL Falcon tubes and pellet cells at 3000rpm for
+              10 min (4℃)
+            </li>
+            <li class="lists">Discard the supernatant</li>
+            <li class="lists">
+              Dilute cells in every Falcon in 1mL cold CaCl2 20mM
+            </li>
+            <li class="lists">
+              Aliquot 100μL of cells in 1.5mL Eppendorf tubes and freeze them
+              immediately in liquid nitrogen
+            </li>
+            <li class="lists">Store at -80℃</li>
+          </ul>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">E. coli Transformation</h1>
+          <p>
+            We use <strong><em>E.coli DH10B</em></strong> cells for our project&rsquo;s
+            needs. This protocol&rsquo;s steps are the following:
+          </p>
+          <ul>
+            <li class="lists">
+              Rest <strong><em>E.coli DH10B</em></strong>cells on ice for 3-5
+              mins
+            </li>
+            <li class="lists">Add ~100ng of DNA</li>
+            <li class="lists">Rest on ice for 30 min</li>
+            <li class="lists">
+              Heat shock at 42℃ for 1 min and thaw on ice for 1 min
+            </li>
+            <li class="lists">Add up to 1mL liquid LB</li>
+            <li class="lists">Incubate at 37℃ (shaking) for 1h</li>
+            <li class="lists">
+              Pellet cells at 2100 rcf for 2 min and discard the supernatant
+            </li>
+            <li class="lists">Resuspend the pellet in LB leftovers</li>
+            <li class="lists">
+              Plate in selective solid medium and incubate overnight at 37℃
+            </li>
+          </ul>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Agrobacterium tumefaciens Transformation</h1>
+          <p>
+            For the purpose of our project we use <strong
+              ><em>Agrobacterium Tumefaciens C58C1</em>
+            </strong>strain. The transformation procedure we use is the
+            following:
+          </p>
+          <ul>
+            <li class="lists">
+              Thaw competent <strong
+                ><em>Agrobacterium Tumefaciens C58C1</em>
+              </strong>cells on ice for 30 minutes.
+            </li>
+            <li class="lists">
+              Add ~5&mu;g of plasmid DNA and cold shock the cells (freeze in
+              liquid nitrogen)
+            </li>
+            <li class="lists">Incubate at 37℃ for 1 hour</li>
+            <li class="lists">
+              Add sterile liquid LB up to 1mL and incubate (shaking) at 28℃ for
+              2-3 hours
+            </li>
+            <li class="lists">
+              Pellet the cells (3000g for 2min) and discard the supernatant
+            </li>
+            <li class="lists">
+              Resuspend the pellet in LB leftovers and plate in solid selective
+              medium
+            </li>
+            <li class="lists">Incubate at 28℃ for 2 days in the dark</li>
+          </ul>
+        </div>
+        <div id="part5" class="subpart scroll">
+          <h1 class="part-title">Isolation of plasmid DNA (mini-preps)</h1>
+          <p>
+            The process of plasmid isolation can be separated into three main
+            steps: Alkaline Lysis, Ethanol Precipitation and Dilution. For this
+            procedure 3 solutions will be needed: Solution I,II and III.
+          </p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Solution I</strong></td>
+                  <td><strong>Solution II</strong></td>
+                  <td><strong>Solution III</strong></td>
+                </tr>
+                <tr>
+                  <td>Glucose 50mM</td>
+                  <td>NaOH 0.2N</td>
+                  <td>Potassium Acetate 60mL</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Tris-Cl 25mM</td>
+                  <td>SDS 1%</td>
+                  <td>Glacial Acetic Acid 11.5mL</td>
+                </tr>
+                <tr>
+                  <td>EDTA 10mM</td>
+                  <td>&nbsp;</td>
+                  <td>dH<sub>2</sub>O 28.5mL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Alkaline Lysis:</p>
+          <ul>
+            <li class="lists">
+              Pellet cells and discard all of the supernatant (2x)
+            </li>
+            <li class="lists">
+              Resuspend the pellet at 100&mu;L of Solution I
+            </li>
+            <li class="lists">
+              Add 200&mu;L of Solution II, mix by turnaround and let sit for a
+              maximum of 5min
+            </li>
+            <li class="lists">
+              Add 150&mu;L of Solution III and mix by turnaround
+            </li>
+            <li class="lists">
+              Centrifuge at 13800g for 10min and collect the supernatant in a
+              clean tube
+            </li>
+          </ul>
+          <p>Ethanol Percipitation:</p>
+          <ul>
+            <li class="lists">
+              Add 900&mu;L of 100% Ethanol and rest in ice for 2min
+            </li>
+            <li class="lists">
+              Centrifuge at 13800g for 20min and discard the supernatant
+            </li>
+            <li class="lists">Wash pellet with 60&mu;L 70% Ethanol</li>
+            <li class="lists">
+              Centrifuge at 13800g for 5min, discard the supernatant and remove
+              Ethanol completely
+            </li>
+            <li class="lists">Air dry in hood for 10min</li>
+          </ul>
+          <p>Dilution:</p>
+          <ul>
+            <li class="lists">
+              Dilute pellet in 30&mu;L dH<sub>2</sub>O (sterile)
+            </li>
+          </ul>
+        </div>
+        <div id="part6" class="subpart scroll">
+          <h1 class="part-title">Agroinfiltration</h1>
+          <p>
+            Agroinfiltration is a procedure in which we inject <em
+              ><strong>Agrobacterium Tumefaciens C58C1</strong>
+            </em>containing our prefered gene into plant leaves to make them
+            express this gene&rsquo;s protein.
+          </p>
+          <p>The procedure takes 2 days.</p>
+          <p>Day 1:</p>
+          <ul>
+            <li class="lists">
+              Start an overnight liquid culture of <em
+                ><strong>Agrobacterium Tumefaciens C58C1</strong>
+              </em>(28℃ )
+            </li>
+          </ul>
+          <p>Day 2:</p>
+          <ul>
+            <li class="lists">
+              Pellet the cells at 2800 rpm for 10 minutes (4℃ )
+            </li>
+            <li class="lists">
+              Discard the supernatant and resuspend the pellet in 10mM MgCl<sub
+                >2</sub
+              >
+              solution (~5mL)
+            </li>
+            <li class="lists">
+              Pellet the cells again, discard the supernatant and resuspend the
+              pellet in 1mL MM solution (10mM MgCl<sub>2</sub> and 10mM MES)
+            </li>
+            <li class="lists">
+              Measure the concentration of the cells using a photometer and
+              dilute until the absorption at 600nm is 0.5
+            </li>
+            <li class="lists">
+              Make a small nick using a small needle at the leaf&rsquo;s
+              underside
+            </li>
+            <li class="lists">
+              Inject a small amount of the cell solution using a syringe
+            </li>
+          </ul>
+          <p>
+            <strong>Note:</strong> The plant used in this procedure must be unwatered.
+          </p>
+        </div>
+        <div id="part7" class="subpart scroll">
+          <h1 class="part-title">Golden Gate Cloning</h1>
+          <p>
+            We used Golden Gate cloning to connect the parts we needed to be
+            expressed together.
+          </p>
+          <p>This protocol was adjusted as NEB instructed.</p>
+          <p>For 20&mu;L reaction:</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Components</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>10x T4 buffer</td>
+                  <td>2&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>100x BSA</td>
+                  <td>0.2&mu;L</td>
+                </tr>
+                <tr>
+                  <td>Backbone Vector</td>
+                  <td>100ng</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>BsaI (NEB)</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr>
+                  <td>T4 ligase</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Assembly pieces</td>
+                  <td>equimolar</td>
+                </tr>
+                <tr>
+                  <td>dH<sub>2</sub>O</td>
+                  <td>up to 20&mu;L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Thermocycler settings are the following:</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Stage</strong></td>
+                  <td><strong>Temperature</strong></td>
+                  <td><strong>Time</strong></td>
+                </tr>
+                <tr>
+                  <td>Digestion</td>
+                  <td>37℃</td>
+                  <td>3 min</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Ligation</td>
+                  <td>16℃</td>
+                  <td>4 min</td>
+                </tr>
+                <tr>
+                  <td>Final Digestion</td>
+                  <td>37℃</td>
+                  <td>10 min</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Enzyme inactivation</td>
+                  <td>80℃</td>
+                  <td>5 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Digestion and Ligation for 25 cycles</p>
+        </div>
+        <div id="part8" class="subpart scroll">
+          <h1 class="part-title">A-tailing</h1>
+          <p>For a 50&mu;L reaction</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Component</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>10x Taq Buffer</td>
+                  <td>5&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>dATP 0.5mM</td>
+                  <td>2.5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>TaqPol 5U/&mu;L</td>
+                  <td>0.2&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>PCR product</td>
+                  <td>25&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dH<sub>2</sub>O</td>
+                  <td>up to 50&mu;L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Incubate at 72℃ for 30 min</p>
+        </div>
+        <div id="part9" class="subpart scroll">
+          <h1 class="part-title">Ligation of A-tailed products</h1>
+          <p>For a 20&mu;L reaction</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Components</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>10x T4 DNA ligase Buffer</td>
+                  <td>2&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Vector</td>
+                  <td>A 1:3 vector to insert ratio</td>
+                </tr>
+                <tr>
+                  <td>Insert</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>T4 DNA Ligase&nbsp;</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dH<sub>2</sub>O</td>
+                  <td>up to 20&mu;L&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Incubate at room temperature for 2 hours</p>
+        </div>
+        <div id="part10" class="subpart scroll">
+          <h1 class="part-title">Colony PCR</h1>
+          <p>For a 50&mu;L reaction</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Components</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>10x Taq Buffer</td>
+                  <td>33.5&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>dNTPs 10mM</td>
+                  <td>5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>FW Primer 10&mu;M</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>REV Primer 10&mu;M</td>
+                  <td>2.5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>TaqPol 5U/&mu;L</td>
+                  <td>2.5&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Template</td>
+                  <td>0.5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dH2O</td>
+                  <td>up to 50&mu;L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Thermocycler settings</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Stage</strong></td>
+                  <td><strong>Time</strong></td>
+                  <td><strong>Temperature</strong></td>
+                </tr>
+                <tr>
+                  <td>Initial Denaturation</td>
+                  <td>3 min</td>
+                  <td>94℃</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Denaturation</td>
+                  <td>45 sec</td>
+                  <td>94℃</td>
+                </tr>
+                <tr>
+                  <td>Annealing</td>
+                  <td>30 sec</td>
+                  <td>Variable</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Extension</td>
+                  <td>Variable</td>
+                  <td>72℃</td>
+                </tr>
+                <tr>
+                  <td>Final Extension</td>
+                  <td>5 min</td>
+                  <td>72℃</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="part11" class="subpart scroll">
+          <h1 class="part-title">High Fidelity PCR</h1>
+          <p>
+            We use High Fidelity PCR for a plethora of our experiments and
+            it&rsquo;s the main method to multiply our parts and constructs.
+          </p>
+          <p>For a 50&mu;L reaction:</p>
+          <div class="overflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Components</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>Template DNA 1ng</td>
+                  <td>0.5&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>5x Phusion Buffer</td>
+                  <td>10&mu;L</td>
+                </tr>
+                <tr>
+                  <td>FW Primer (0.5&mu;M)</td>
+                  <td>2.5&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>REV Primer (0.5&mu;M)</td>
+                  <td>2.5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dNTPs (0.2mM)</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>Phusion Dna Polymerase (2U/&mu;L)</td>
+                  <td>0.5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dH<sub>2</sub>O</td>
+                  <td>up to 50&mu;L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="part12" class="subpart scroll">
+          <h1 class="part-title">Restriction Digestions</h1>
+          <p>
+            In our case we used the restriction enzymes NdeI and SacI. We used
+            the protocol provided by NEB. For a 50&mu;L reaction:
+          </p>
+          <div class="oveflow">
+            <table class="part-table">
+              <tbody>
+                <tr class="table-titles">
+                  <td><strong>Component</strong></td>
+                  <td><strong>Amount</strong></td>
+                </tr>
+                <tr>
+                  <td>DNA</td>
+                  <td>1&mu;g</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>10x Buffer</td>
+                  <td>5&mu;L</td>
+                </tr>
+                <tr>
+                  <td>NdeI</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr class="table-rows">
+                  <td>SacI</td>
+                  <td>1&mu;L</td>
+                </tr>
+                <tr>
+                  <td>dH<sub>2</sub>O</td>
+                  <td>up to 50&mu;L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Incubate for 5-15 min at 37℃</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+<style>
+  @import "../../static/styles/text-page.css";
+
+  ul {
+    font-size: 1.25rem;
+  }
+
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coral-red-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+  strong {
+    color: var(--blue-color);
+  }
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  .table-titles {
+    background-color: var(--coral-red-color);
+    width: fit-content;
+  }
+
+  .table-titles strong {
+    color: white;
+  }
+
+  .table-rows {
+    padding-left: 0.5em;
+    background-color: #fce7e9;
+  }
+
+  .part-table {
+    background-color: white;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .overflow {
+    overflow-x: auto;
+  }
+
+  td {
+    padding: 0.5em;
+    border: 2px solid #ffffff;
+  }
+  @media (max-width: 992px) {
+    .part-table {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 576px) {
+    .part-table {
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Medals">
+  <Navbar activeNav="awards" />
+  <div class="blend"></div>
+  <div class="container page-without-sidebar">
+    <div class="big-main-title" data-content="Medals">Medals</div>
+    <section class="parts-container">
+      <div class="subpart">
+        <h1 class="part-title">Bronze Deliverables &#129353;</h1>
+        <ul>
+          <li class="lists">
+            <h3 class="section-title">Competition Deliverables</h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/attributions"> Project Attributions</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/description"> Project Description</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/contribution">Contribution</a>
+            </h3>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subpart">
+        <h1 class="part-title">Silver Deliverables &#129352;</h1>
+        <ul>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/engineering">Engineering Success</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/collaborations">Collaborations</a>
+            </h3>
+          </li>
+
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/human-practices">Human Practices</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/implementation">Proposed Implementation</a>
+            </h3>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subpart">
+        <h1 class="part-title">Gold Deliverables &#129351</h1>
+        <ul>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/human-practices">Integrated Human Practices</a>
+            </h3>
+            <h3 class="section-title"></h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">Improvement of an Existing Part</h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/model">Project Modeling</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/proof-of-concept">Proof of Concept</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/partnership">Partnership</a>
+            </h3>
+          </li>
+          <li class="lists">
+            <h3 class="section-title">
+              <a href="/crete/communication">Education & Communication</a>
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <div class="bottom-footer">
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  .page-without-sidebar {
+    font-family: var(--second-font);
+    padding-top: calc(50px + 2em); /* 50px navbar + 2em padding */
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    opacity: 0.75;
+  }
+
+  .lists {
+    list-style-type: none;
+    padding-left: 2.5em;
+    position: relative;
+  }
+
+  .lists:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--dark-blue-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 15px;
+  }
+
+  .bottom-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-height: 1300px) {
+    .bottom-footer {
+      position: relative;
+    }
+  }
+</style>

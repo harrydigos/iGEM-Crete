@@ -1,0 +1,192 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Proof of Concept">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Introduction", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "The beginning of the plan", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Experimental planing", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Results and analysis", id: "part4" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Conclusion", id: "part5" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Proof of Concept">
+        Proof of Concept
+      </div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Design</h1>
+          <p>
+            For the development of our project we ensured that we provided
+            sufficient evidence that our system is functional. During the whole
+            duration of our experiments we ensured that we keep safety as the
+            number one priority. We also tried to keep results for each one of
+            our experimental procedures to strengthen the transparency of our
+            concept.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">The beginning of the plan</h1>
+          <p>
+            After countless brainstorming sessions we ended up in our project
+            idea, ATROPA, which is basically a diagnostic tool utilizing LRRs
+            for TSWV diagnosis. The first step was to test in silico that our
+            idea has a potential and this is where our project modeling came in.
+          </p>
+          <div class="center">
+            <img
+              id="img2"
+              class="img-style"
+              width="70%"
+              src={`${ASSETS_URL}/images/proof/image1-optimized.png`}
+            />
+          </div>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/model">Modeling</a>
+            </strong>
+          </p>
+          <p>
+            Our predictions really showed us that there is actually interaction
+            between the LRR domain of Sw-5b resistance gene and the Nsm<sup
+              >115-135</sup
+            >. This was the confirmation we needed to proceed with the
+            experimental part of our project.
+          </p>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Experimental planing</h1>
+          <p>
+            Before the lab work was initiated, we shared our plans with both our
+            supervisor and our advisors. After getting critical feedback and
+            insights from them we started planning our experimental procedures.
+            When the planning was over we again consulted them and optimized
+            every step of the process. This is when the actual experiments were
+            ready to begin.
+          </p>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/experiments">Experiments</a>
+            </strong>
+          </p>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Results and analysis</h1>
+          <p>
+            As mentioned before results from all of the steps of our experiments
+            were collected to properly display the progress of our project. The
+            final experiment showed positive results and the proof of concept
+            for our project was established. In particular, after incubating the <strong
+              ><em>E.coli</em>
+            </strong>cells which were surface displaying the LRR and the NB-LRR
+            of SW-5b resistance gene of <strong
+              ><em>Solanum Peruvianum</em>
+            </strong><em>,</em> with the protein extract from <strong
+              ><em>N. Sylvestris</em>
+            </strong>leaves expressing the Nsm<sup>115-135</sup> viral protein fused
+            with YFP, we observed fluorescence in the samples. This means that our
+            <em>E.coli</em>cells have the ability to bind this protein.
+          </p>
+          <div>
+            <img
+              id="img2"
+              class="img-style"
+              width="60%"
+              src={`${ASSETS_URL}/images/proof/image2-optimized.png`}
+            />
+          </div>
+          <p>
+            See more of our <strong
+              ><a class="link" href="/crete/results">Results</a>
+            </strong>
+          </p>
+        </div>
+        <div id="part5" class="subpart scroll">
+          <h1 class="part-title">Conclusion</h1>
+          <p>
+            Overall we managed to show that our system of surface displaying
+            cells are capable of binding our target effector protein, while
+            E.coli surface displaying random peptides did not. In our opinion
+            this is a novel approach to reconsider diagnostic tool’s basic
+            elements. We think that whole-cell based diagnostic tools can
+            significantly lower the price of production while providing the
+            affinity and specificity of antibody-based systems.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+<style>
+  @import "../../static/styles/text-page.css";
+  .link {
+    color: var(--blue-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--coral-red-color);
+  }
+  strong {
+    color: var(--blue-color);
+  }
+
+  .img-style {
+    border-radius: 10px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  .overflow {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 992px) {
+    #img1,
+    #img2 {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #img2 {
+      width: 90%;
+    }
+  }
+  @media (max-width: 576px) {
+    #img2 {
+      width: 100%;
+    }
+  }
+</style>

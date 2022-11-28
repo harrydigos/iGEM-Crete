@@ -1,0 +1,692 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import { ASSETS_URL } from "../../static/utils/constants";
+import CTAHome from "../components/CTAButtons/CTAHome.astro";
+import Tomato from "../components/Tomato.astro";
+---
+
+<Layout title="iGEM Crete">
+  <Navbar activeNav="home" />
+  <div data-scroll-container>
+    <div data-scroll-section>
+      <div class="container">
+        <div class="hero-container">
+          <div class="atropa">
+            <div class="atropa-logo-1" data-scroll>
+              ATR<img src={`${ASSETS_URL}/images/logo/tomato.svg`} />PA
+            </div>
+            <div class="atropa-logo-2" data-scroll>
+              Agricultural Techniques & Research On Preventive Agrodiagnostics
+            </div>
+          </div>
+          <div class="atropa-description" data-scroll>
+            Bridging the gap between diagnostics and conservation
+          </div>
+          <div data-scroll>
+            <CTAHome
+              text="Learn more"
+              link="/crete/description"
+              bgColor="var(--coral-red-color)"
+              textColor="#ffffff"
+            />
+          </div>
+        </div>
+      </div>
+      <Tomato client:load />
+      <div class="scroll-indicator">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div data-scroll-section>
+      <img
+        class="hero-photo-mobile"
+        src={`${ASSETS_URL}/images/hero/hero-index.png`}
+      />
+    </div>
+
+    <!-- Sponsors -->
+    <section data-scroll-section>
+      <div class="sponsors">
+        <img src={`${ASSETS_URL}/images/sponsors/plastikakritis.png`} />
+        <img src={`${ASSETS_URL}/images/sponsors/xalkiadakis.png`} />
+        <img src={`${ASSETS_URL}/images/sponsors/forlabels.svg`} />
+        <img src={`${ASSETS_URL}/images/sponsors/agan1.png`} />
+        <img src={`${ASSETS_URL}/images/sponsors/uoc.png`} />
+        <img src={`${ASSETS_URL}/images/sponsors/sklavenitis.svg`} />
+      </div>
+    </section>
+
+    <section class="section-container" data-scroll-section>
+      <div class="container">
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-2"
+        >
+          <div
+            class="section-title"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-2"
+          >
+            description
+          </div>
+          <div class="section-content">
+            Atropa concerns the utilization of
+            <span class="highlight">LRR domain</span> containing proteins for agricultural
+            diagnostics. We acquired the LRR domain of the Sw-5b resistance gene
+            of Solanum peruvianum and fused it with the Fc domain of an IgG1 protein
+            with a linker to assure correct folding of all partners. The utility
+            of this chimera was tested with the Yeast-two-Hybrid method and as a
+            bait we used the movement protein of Tomato spotted wilt virus (NSm:YFP)
+            fused with YFP.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-container">
+      <div class="container" data-scroll-section>
+        <div
+          class="section-title"
+          data-scroll
+          data-scroll-direction="horizontal"
+        >
+          the problems
+        </div>
+        <div class="stacked-problems">
+          <div
+            class="problem-item"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="2"
+          >
+            <div class="problem-item-title">Crops are being destroyed</div>
+            <div class="problem-item-description">
+              By harmful pathogens such as TSWV
+            </div>
+            <div class="problem-number"><span>01</span></div>
+          </div>
+          <div
+            class="problem-item"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-3"
+          >
+            <div class="problem-item-title">TSWV spreads fast</div>
+            <div class="problem-item-description">
+              Many pathogens easily cross the wildlife/crop barrier
+            </div>
+            <div class="problem-number"><span>02</span></div>
+          </div>
+          <div
+            class="problem-item"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="2"
+          >
+            <div class="problem-item-title">Pathogens resort to the wild</div>
+            <div class="problem-item-description">
+              Wildlife habitats become pathogen incubators
+            </div>
+            <div class="problem-number"><span>03</span></div>
+          </div>
+          <div
+            class="problem-item"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-1"
+          >
+            <div class="problem-item-title">Biodiversity is at risk</div>
+            <div class="problem-item-description">
+              Crop pathogens become perilous for wild ecosystems
+            </div>
+            <div class="problem-number"><span>04</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <!-- <section class="section-container" data-scroll-section>
+      <div class="container" data-scroll data-scroll-speed="2">
+        <div class="statistics">
+          <div class="stat-item">
+            <div class="stat-number">13123</div>
+            <div class="stat-title">Lorem ipsum dolor sit amet</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">645645</div>
+            <div class="stat-title">Lorem ipsum dolor sit amet</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">645</div>
+            <div class="stat-title">Lorem ipsum dolor sit amet</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Implementation -->
+    <section class="section-container" data-scroll-section>
+      <div class="container">
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="3"
+        >
+          <div
+            class="section-title"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="2"
+          >
+            implementation
+          </div>
+          <div class="section-content">
+            Paving the appropriate way to implement your idea in the real world
+            can be an arduous yet rewarding task. From building our actual test
+            kit, to exploring the ways we can conserve the environment, whilst
+            tackling the food crisis, our team this year went above and beyond
+            to deliver a complete tool with immense future possibilities. Today
+            the battle is fought against
+            <span class="highlight">TSWV</span>, tomorrow it may as well be
+            against every plant pathogen there is.
+          </div>
+        </div>
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="2"
+        >
+          <a class="section-content-link" href="/crete/implementation"
+            >Read more about implementation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Template -->
+    <section class="section-container" data-scroll-section>
+      <div
+        class="container section-right"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-3"
+      >
+        <div
+          class="section-title"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-1"
+        >
+          Inspiration
+        </div>
+        <div class="section-content">
+          “Alone we can do so little, together we can do so much.” — Helen
+          Keller . We based our choice of project in a set of values that
+          characterize our team as a whole. It is a common secret that humanity
+          has devastated and trivialized the environment unprecedentedly.
+          Thoughout our project we prioritized the environment and tried to
+          protect it in many aspects.
+        </div>
+        <!-- <a class="section-content-link" href="#">Read more about</a> -->
+      </div>
+    </section>
+
+    <div data-scroll-section>
+      <Footer />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .hero-photo-mobile {
+    display: none;
+    height: 50%;
+    z-index: -1;
+    margin: 0 auto;
+  }
+  .tomato {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-container {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 2.5em;
+    font-family: var(--main-font);
+  }
+
+  .atropa {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .atropa-logo-1 {
+    font-family: var(--main-font-bold);
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .atropa-logo-2 {
+    font-family: var(--main-font-medium);
+    font-size: 2rem;
+  }
+
+  .atropa-description {
+    font-family: var(--main-font-medium);
+    font-size: 1.5rem;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 2.25em;
+    height: 4.5em;
+    border: 0.25em solid var(--dark-blue-color);
+    border-radius: 2em;
+    background-color: #ffffff;
+  }
+
+  .scroll-indicator .circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    background: var(--dark-blue-color);
+    animation: scrollAnim 3s infinite;
+  }
+
+  @keyframes scrollAnim {
+    0% {
+      top: 30%;
+      opacity: 0.3;
+      height: 1em;
+    }
+    30% {
+      top: 20%;
+      opacity: 1;
+      height: 0.75em;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 60%;
+      opacity: 0;
+      height: 1em;
+    }
+  }
+
+  /* Sponsors */
+
+  .sponsors {
+    display: flex;
+    justify-content: center;
+    row-gap: 1em;
+    column-gap: 3em;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em 0em;
+  }
+
+  .sponsors img {
+    max-width: 10em;
+    filter: grayscale(100%);
+  }
+
+  /* Problems */
+
+  .stacked-problems {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    padding: 0 1em;
+    margin: auto;
+    font-family: var(--main-font);
+  }
+
+  .problem-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1em;
+  }
+
+  .problem-item:nth-child(even) {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  .problem-item:nth-child(even) > .problem-number {
+    grid-area: 1 / 1 / 3 / 2;
+    justify-content: flex-end;
+  }
+
+  .problem-item-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+
+  .problem-item-description {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.4;
+    font-family: var(--second-font);
+  }
+
+  .problem-number {
+    display: flex;
+    grid-area: 1 / 2 / 3 / 3;
+    color: var(--cream-green-color);
+    align-items: center;
+  }
+
+  .problem-number span {
+    font-size: 10rem;
+    font-family: var(--main-font-bold);
+    rotate: -90deg;
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Sections */
+
+  .section-container {
+    padding: 2em 0;
+  }
+
+  .section-title {
+    font-family: var(--main-font-bold);
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    color: var(--dark-blue-color);
+    margin-bottom: 1em;
+  }
+
+  .section-right {
+    text-align: end;
+  }
+
+  .section-content {
+    font-size: 1.75rem;
+    font-family: var(--main-font-medium);
+    font-family: var(--second-font);
+    line-height: 1.4;
+    margin: 1em 0;
+  }
+
+  .section-content-link {
+    font-size: 1.75rem;
+    font-family: var(--main-font-medium);
+    color: var(--dark-blue-color);
+    text-decoration: underline;
+  }
+
+  /* Highlighter */
+
+  .highlight {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight:before {
+    content: "";
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: white;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 10px 5px;
+    padding: 8px 2px 2px 8px;
+    z-index: -1;
+  }
+
+  /* Statistics */
+
+  /* .statistics {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    font-family: var(--main-font);
+    padding: 1em 0;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-family: var(--main-font-bold);
+  }
+
+  .stat-title {
+    font-size: 1.25rem;
+    font-family: var(--main-font-medium);
+    text-align: center;
+  } */
+
+  @media (max-width: 1200px) {
+    .stacked-problems {
+      width: 75vw;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-photo-mobile {
+      display: block;
+      width: 100%;
+    }
+
+    .hero-container {
+      padding-top: 4em;
+      padding-bottom: 4em;
+      width: 100%;
+      height: 50%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .atropa-logo-1 {
+      justify-content: center;
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .stacked-problems {
+      width: 100%;
+      gap: 2em;
+    }
+
+    .problem-item {
+      gap: 0.5em;
+    }
+
+    .problem-item-title {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .problem-item-description {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .problem-number span {
+      width: auto;
+      height: auto;
+      font-size: 8rem;
+    }
+
+    .section-title::after {
+      display: none;
+    }
+
+    .section-content,
+    .section-content-link {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .statistics {
+      gap: 1.25em;
+    }
+
+    .stat-number {
+      font-size: 2.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-photo-mobile {
+      height: 45%;
+    }
+
+    .sponsors {
+      row-gap: 1em;
+      column-gap: 2em;
+    }
+
+    .sponsors img {
+      max-width: 8em;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-photo-mobile {
+      height: 40%;
+    }
+    .hero-container {
+      padding-top: 3em;
+      padding-bottom: 2em;
+      gap: 1.5em;
+    }
+
+    .atropa-logo-1 {
+      font-size: 70px;
+      gap: 0;
+    }
+    .atropa-logo-1 img {
+      width: 55px;
+    }
+
+    .atropa-logo-2 {
+      font-size: 1.25rem;
+    }
+
+    .atropa-description {
+      font-size: 1rem;
+    }
+
+    .sponsors {
+      row-gap: 1em;
+      column-gap: 1em;
+    }
+
+    .sponsors img {
+      max-width: 5em;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .stacked-problems {
+      margin: 0;
+    }
+
+    .problem-item {
+      grid-template-columns: 1fr 0.5fr;
+    }
+
+    .problem-item:nth-child(even) {
+      grid-template-columns: 0.5fr 1fr;
+    }
+
+    .problem-item-title {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .problem-item-description {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .problem-number span {
+      font-size: 6rem;
+    }
+
+    .section-content,
+    .section-content-link {
+      font-size: 1.125rem;
+    }
+
+    .statistics {
+      gap: 1em;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .stat-number {
+      font-size: 2.25rem;
+    }
+
+    .stat-title {
+      font-size: 1.25rem;
+    }
+  }
+</style>
+
+<script>
+  import LocomotiveScroll from "locomotive-scroll";
+
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    smoothMobile: true,
+    getDirection: true,
+    reloadOnContextChange: true,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
+  });
+</script>

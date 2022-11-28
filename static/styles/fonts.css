@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("https://static.igem.wiki/teams/4495/wiki/fonts/montserrat-regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("https://static.igem.wiki/teams/4495/wiki/fonts/montserrat-medium.ttf")
+    format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("https://static.igem.wiki/teams/4495/wiki/fonts/montserrat-bold.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("https://static.igem.wiki/teams/4495/wiki/fonts/lato-regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

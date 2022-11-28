@@ -1,0 +1,262 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Attributions">
+  <Navbar activeNav="team" />
+  <div class="blend"></div>
+  <div data-scroll-container class="container page">
+    <div class="sideBar">
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Gold Sponsors", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Silver Sponsors", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Bronze Sponsors", id: "part3" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+    <main>
+      <div class="big-main-title" data-content="Sponsors">Sponsors</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Gold&#129351;</h1>
+
+          <div class="box">
+            <h3>University of Crete</h3>
+            <div class="links">
+              <a href="https://en.uoc.gr/"><i class="ph-globe-bold"></i></a>
+              <a href="https://www.linkedin.com/school/university-of-crete/"
+                ><i class="ph-linkedin-logo-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src={`${ASSETS_URL}/images/sponsors/uoc.png`} class="logo" />
+          </div>
+          <p>
+            Established in 1973, the University of Crete is a young public
+            educational institution sited in a region rich in ancient and modern
+            Mediterranean cultures. Currently around 20,000 undergraduate and
+            graduate students study here through the Schools of Philosophy,
+            Education, Social Sciences, Sciences & Technology, and Medicine,
+            taught by an outward looking academic staff committed to quality in
+            teaching, research, and community partnerships.
+          </p>
+        </div>
+
+        <div id="part2" class="subpart">
+          <h1 class="part-title">Silver&#129352;</h1>
+
+          <div class="box">
+            <h3>Plastika Kritis S.A.</h3>
+            <div class="links">
+              <a href="https://www.plastikakritis.com/en"
+                ><i class="ph-globe-bold"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/plastikakritis.com/"
+                ><i class="ph-linkedin-logo-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src={`${ASSETS_URL}/images/sponsors/plastikakritis.png`}
+              class="logo"
+            />
+          </div>
+          <p>
+            Plastika Kritis S.A. was established in 1970. It is one of the
+            leading European producers of masterbatches and agricultural films.
+            Its products are serving the plastics industry, the horticultural &
+            agricultural markets as well as projects related to water-management
+            & environment protection.
+          </p>
+          <p>
+            The company has a strong international orientation with plants in
+            France, Romania, Poland, Russia, Turkey and China and exports to
+            more than 60 countries around the world. It has been listed in the
+            Athens Stock Exchange since 1999.
+          </p>
+
+          <div class="box">
+            <h3>Greek Tomato AGAN G.P.</h3>
+            <div class="links">
+              <a
+                href="https://www.linkedin.com/in/greektomato-agan-g-p-112948167/ "
+                ><i class="ph-linkedin-logo-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src={`${ASSETS_URL}/images/sponsors/agan1.png`} class="logo" />
+          </div>
+          <p>
+            Greektomato- AGAN Single Member Company Ltd is an agricultural
+            company that takes advantage of advanced technology and the method
+            of hydroponics to produce tomatoes.
+          </p>
+          <p>
+            The company's facilities are located in Messini Messinias (location
+            Kaminia) "greenhouse 43,000 square meters, in an extension of
+            100,000 square meters" where tomatoes and tomato bunches are
+            produced by the method of hydroponics. The greenhouse is based on
+            automation system and is structured according to the latest Dutch
+            standards.
+          </p>
+          <p>
+            The aim of their company is the production of products of high
+            quality and nutritional value, through friendly methods using
+            technology to control environmental conditions, for the benefit of
+            consumers.
+          </p>
+
+          <div class="box">
+            <h3>Forlabes SA</h3>
+            <div class="links">
+              <a href="https://www.forlabels.gr/en/"
+                ><i class="ph-globe-bold"></i>
+              </a>
+              <a href=" https://www.linkedin.com/company/forlabels/ "
+                ><i class="ph-linkedin-logo-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src={`${ASSETS_URL}/images/sponsors/forlabels.svg`}
+              class="logo"
+            />
+          </div>
+          <p>
+            Forlabels is a B2B organization that works as an influencer and a
+            trend seller for advanced, qualitative Packaging Solutions in
+            Greece. Founded in 1986 as a family business, Forlabels evolves with
+            a vision to connect people with worth-living product experiences.
+          </p>
+          <p>
+            They produce adhesive labels, shrink sleeves, wrap arounds, peel-off
+            labels and flexible packaging solutions.
+          </p>
+          <p>
+            Their certifications (ISO 9001, ISO 22000:2018, ISO14001:2015, FSC®
+            & PEFC™ , EUROCERT ETHOS Socially Responsible) and their awards
+            concerning the packaging industry ranks them among the most
+            significant companies in Greece and Europe.
+          </p>
+        </div>
+
+        <div id="part3" class="part">
+          <h1 class="part-title">Bronze&#129353;</h1>
+          <div class="box">
+            <h3>Xalkiadakis SA</h3>
+            <div class="links">
+              <a href="https://www.xalkiadakis.gr/el/home"
+                ><i class="ph-globe-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src={`${ASSETS_URL}/images/sponsors/xalkiadakis.png`}
+              class="logo"
+            />
+          </div>
+          <p>
+            For over 35 years and with 41 stores all over Crete, super markets
+            Xalkiadakis have been the leading option for the locals. Crete's
+            largest supermarket chain, led by a cretan family, this is where
+            Cretans do their shopping. Their aim is to offer their costumers
+            quality products, supporting the local community and utilizing their
+            human resources, always respecting their principles and values.
+          </p>
+
+          <div class="box">
+            <h3>Sklavenitis</h3>
+            <div class="links">
+              <a href="https://www.sklavenitis.gr/"
+                ><i class="ph-globe-bold"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src={`${ASSETS_URL}/images/sponsors/sklavenitis.svg`}
+              class="logo"
+            />
+          </div>
+          <p>
+            Hellenic Supermarkets Sklavenitis is a purely greek company in the
+            field of retailing food products, consumer goods and durable goods.
+          </p>
+          <p>
+            The company developed with steady steps, remaining faithful to the
+            Principles an Values established by its founders, always seeking to
+            have excellent quality products at prices &ldquo;as cheap as
+            anywhere else&rdquo;, to offer courteous and fast service and to
+            contribute to the progress of our society.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+  .box {
+    display: flex;
+    gap: 1em;
+    color: var(--dark-blue-color);
+  }
+  .box h3 {
+    font-family: var(--main-font);
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.5rem;
+  }
+  .links a {
+    color: var(--dark-blue-color);
+  }
+  .links a:hover {
+    color: var(--coral-red-color);
+  }
+  .logo {
+    max-width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      max-width: 40%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .logo {
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .logo {
+      max-width: 60%;
+    }
+  }
+</style>

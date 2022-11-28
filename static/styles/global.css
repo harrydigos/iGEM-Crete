@@ -1,0 +1,89 @@
+:root {
+  /* Color palette */
+  --tomato-red-color: #d90429;
+  --coral-red-color: #e63946;
+  --cream-green-color: #f1faee;
+  --turquoise-color: #a8dadc;
+  --blue-color: #457b9d;
+  --dark-blue-color: #1d3557;
+
+  /* Fonts */
+  --main-font: "Montserrat-Regular";
+  --second-font: "Lato-Regular";
+
+  --main-font-medium: "Montserrat-Medium";
+
+  --main-font-bold: "Montserrat-Bold";
+  --second-font-bold: "Lato-Bold";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Containers */
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

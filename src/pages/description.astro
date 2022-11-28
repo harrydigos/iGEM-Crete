@@ -1,0 +1,286 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import { ASSETS_URL } from "../../static/utils/constants";
+---
+
+<Layout title="iGEM Crete | Description">
+  <Navbar activeNav="project" />
+  <div class="blend"></div>
+  <div class="container page">
+    <div>
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Project Inspiration", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "TSWV", id: "part2" },
+            subParts: [
+              {
+                title: "Profile of the virus",
+                id: "profile-virus",
+              },
+              { title: "Impact on tomato cultivation", id: "impact" },
+            ],
+          },
+          {
+            mainPart: { title: "Concept of LRR diagnostic tools", id: "part3" },
+            subParts: [
+              { title: "LRRs and plant immunity", id: "llr" },
+              { title: "Our novel diagnostic tool", id: "tool" },
+              {
+                title: "Advantages over Antibody diagnostic tests",
+                id: "advantages",
+              },
+            ],
+          },
+          {
+            mainPart: { title: "References", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <div>
+      <div class="big-main-title" data-content="Description">Description</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Project Inspiration</h1>
+          <p>
+            This year's project idea came through after a great amount of
+            consideration and the rejection of many preliminary ideas. It was a
+            priority for our team to decide on a project that would have a
+            considerable impact on our community and worldwide, but also ensure
+            the preservation of the biodiversity of species and biological
+            communities.<br /><br /> We were particularly concerned about the unequal
+            distribution of products in developing countries, especially African
+            countries which are entitled to 11,9% of the tomato product share, and
+            the loss of crops due to pests. Furthermore, we considered that unrestricted
+            plant exportation worldwide increases the risk of pathogen transmission
+            and causes microbiome disruption, which is responsible for the loss of
+            native species and thus biodiversity. Taking into account the recent
+            increase in tospoviruses spread in Greece and especially in Crete, we
+            decided the ideal project for this year’s competition is to create a
+            diagnostic tool that detects the plant pathogen TSWV and other tospoviruses
+            to prevent viruses transmission and destruction of inland tomato produce.
+          </p>
+        </div>
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">TSWV</h1>
+        </div>
+        <div id="profile-virus" class="subpart scroll">
+          <h3 class="section-title">
+            Profile of the virus and other tospoviruses
+          </h3>
+          <p>
+            Tomato spotted wilt virus (TSWV) is a pathogen with one of the
+            broadest known host ranges among RNA viruses. It belongs to the
+            species <i><strong>Tospovirus</strong></i>, the genus <i
+              ><strong>Orthotospovirus</strong>
+            </i>, the family <i><strong>Tospovirdae</strong></i>, and the order <i
+              ><strong>Bunyaviridae</strong>
+            </i>. TSWV is a negative-stranded RNA virus in the and is a major
+            constraint on the production worldwide of tomatoes and other
+            solanaceous crops. Of note, TSWV has a described host range of over
+            1000 plant species distributed across more than 90 families of
+            angiosperms. Its genome is composed of three viral genomic RNAs
+            (large, medium, and small) encoding five proteins, three conserved
+            among all bunyaviruses and two that likely reflect specific
+            adaptations to plants and insects. <br /><br /> The genus Tospovirus
+            is unique within the other four genera (Orthobunyavirus, Hantavirus,
+            Nairovirus, and Phlebovirus) of the family Bunyaviridae because it consists
+            of viruses that infect plants. In general, tospoviruses are recognized
+            globally as an emerging agricultural threat posing a grave concern for
+            global food security. Mature virions range in size from 80 to 100 nm
+            and they show considerable variation between and within species in terms
+            of symptoms caused, virulence, and ability to overcome host resistance.<br
+            />
+            <br /> TSWV is predominantly transmitted by western flower thrips <i
+              ><strong>(F. occidentalis)</strong>
+            </i> which is also the primary driver of the worldwide emergence of tospoviruses.
+            Last but not least, western flower thrips is one of the most important
+            vectors due to its wide plant host range and expansive distribution across
+            North and South America, Australia, Europe, and the Middle East.
+          </p>
+        </div>
+        <div id="impact" class="subpart scroll">
+          <h3 class="section-title">Impact on tomato cultivation</h3>
+          <p>
+            <i><strong>Solanum Lycopersicum</strong></i> (tomato) is one of the most
+            important economic vegetable crops. However, TSWV is one of the most
+            destructive diseases affecting tomato cultivation and production worldwide
+            which leads to huge economic losses. Infected tomato plants are usually
+            dwarfed and have necrotic streaks and dark-brown flecks on their leaves,
+            stems, and fruits. The first symptoms in tomato seedlings are inhibited
+            growth points and copper-colored rolls of young leaves. Subsequently,
+            many small dark-brown flecks form, and leaf veins become purple (Shiming
+            et al., 2021).
+          </p>
+        </div>
+        <div id="part3" class="part scroll">
+          <h1 class="part-title">Concept of LRR diagnostic tools</h1>
+        </div>
+        <div id="llr" class="subpart scroll">
+          <h3 class="section-title">LRRs and plant immunity</h3>
+          <p>
+            Leucine-rich repeats, also known as LRRs, are protein domains
+            evolutionarily conserved among plants, vertebrates, and
+            invertebrates. Abundant with leucine residues, they form a pattern
+            that ranges from 20 to 30 amino acids and fold into a horseshoe
+            shape. Their main purpose is to provide a framework for
+            protein-protein interactions. Involved with the innate immune
+            system, LRR-containing proteins are responsible for the recognition
+            of numerous bacterial, fungal and viral effectors as well as
+            molecules indicating damaged-self. <br /><br /> During the infection,
+            plant pathogens inject virulence-related proteins, the effectors, that
+            interfere with the host’s physiology and immune responce. Fortunately,
+            plants have developed receptors to detect these virulent molecules. Intracellular
+            NLR receptors (nucleotide-binding leucine-rich repeat receptors), are
+            employed to sense effector presence or activity and trigger a robust
+            immune response. This response usually leads to the death of the compromised
+            cell which halts the colonization of the pathogen resulting in disease
+            resistance.
+          </p>
+        </div>
+        <div id="tool" class="subpart scroll">
+          <h3 class="section-title">Our novel diagnostic tool</h3>
+          <p>
+            The innovation that differentiates our diagnostic test from classic
+            antibody tests is that we pursue a whole-cell diagnostic approach.
+            E.coli cells display the NB-LRR domains and bind the movement
+            protein of several viruses of the genus tospovirus that is
+            recognized by the Sw-5b resistance gene of <i
+              ><strong>Solanum peruvianum</strong>
+            </i>. The movement protein contributes to the pathogenicity of the
+            viruses that serves as an effector protein. For our project we
+            introduce
+            <i><strong>Agrobacterium tumefaciens</strong></i> cells, transformed
+            in order to express the effector domain that is fused with fluorescent
+            YFP, into <i><strong>Nicotiana sylvestris</strong></i>. Our E.coli
+            cells that are surface-displaying the novel chimeric protein are
+            tested for their binding efficacy. In the case that the NB-LRR and
+            effector domains bind, fluorescence is observed after several rounds
+            of cell washes and we have a positive result.
+          </p>
+          <div>
+            <img
+              width="90%"
+              src={`${ASSETS_URL}/images/description/ompa-nb-lrr.png`}
+            />
+          </div>
+        </div>
+        <div id="advantages" class="subpart scroll">
+          <h3 class="section-title">
+            Advantages over Antibody diagnostic tests
+          </h3>
+          <p>
+            A whole-cell LRR-based diagnostic tool is a novel idea with numerous
+            advantages over traditional Antibody diagnostic tests. For instance,
+            the NLRs of a plant are binding proteins that can be successfully
+            expressed in prokaryotic cells and be functional, as they are single
+            peptides. Conventional antibodies that are used for diagnosis are
+            typically expressed in eukaryotic cell systems to ensure post
+            translational modifications and correct folding of the proteins.
+            Thus, expression of the proteins of interest in bacterial expression
+            systems exhibits significant advantages. <br /><br /> The economical
+            advantage of our initiative should also be considered. Protein purification
+            is not required due to the fact that whole cells are used to express
+            the binder. Thus the cost of production is minimal. The use of whole
+            cells is also advantageous because it eliminates the need for the purified
+            proteins to be be subdued to gold-conjugation for pathogen detection.
+            For the visualization of the result we propose a chromoprotein expressed
+            in the bacterial cells. Last but not least, since immunization and experimentation
+            on lab animals are not required, this method of developing detection
+            tools is eliminating any ethical concerns coupled with the conventional
+            antibody-based diagnostic tool.
+          </p>
+        </div>
+        <div id="part4" class="part">
+          <h1 class="part-title">References</h1>
+          <p class="wrap">
+            1.&nbsp;Ng, A., & Xavier, R. J. (2011). Leucine-rich repeat (LRR)
+            proteins: integrators of pattern recognition and signaling in
+            immunity. Autophagy, 7(9), 1082–1084.<a
+              href="https://doi.org/10.1186/1746-4811-7-22"
+              target="_blank">&nbsp;https://doi.org/10.1186/1746-4811-7-22</a
+            >
+          </p>
+          <p class="wrap">
+            2.&nbsp;Bentham, A., Burdett, H., Anderson, P. A., Williams, S. J.,
+            & Kobe, B. (2017). Animal NLRs provide structural insights into
+            plant NLR function. Annals of botany, 119(5), 827–702<a
+              href="https://doi.org/10.1093/aob/mcw171"
+              target="_blank">&nbsp;https://doi.org/10.1093/aob/mcw171</a
+            >
+          </p>
+          <p class="wrap">
+            3.&nbsp;Jones, J., Dangl, J. The plant immune system. Nature 444,
+            323–329 (2006).
+            <a href="https://doi.org/10.1038/nature05286" target="_blank"
+              >&nbsp;https://doi.org/10.1038/nature05286</a
+            >
+          </p>
+          <p class="wrap">
+            4.&nbsp;Ruark-Seward, C. L., Bonville, B., Kennedy, G., & Rasmussen,
+            D. A. (2020). Evolutionary dynamics of Tomato spotted wilt virus
+            within and between alternate plant hosts and thrips. Scientific
+            Reports, 10(1).
+            <a href="https://doi.org/10.1038/s41598-020-72691-3" target="_blank"
+              >&nbsp;https://doi.org/10.1038/s41598-020-72691-3</a
+            >
+          </p>
+          <p class="wrap">
+            5.&nbsp;Oliver, J. E., & Whitfield, A. E. (2016, September 29). The
+            Genus Tospovirus: Emerging Bunyaviruses that Threaten Food Security.
+            Annual Review of Virology. Annual Reviews Inc.
+            <a
+              href="https://doi.org/10.1146/annurev-virology-100114-055036"
+              target="_blank"
+              >&nbsp;https://doi.org/10.1146/annurev-virology-100114-055036</a
+            >
+          </p>
+          <p>
+            6.&nbsp;FAOSTAT. (2021). Crops and livestock products. Food and
+            Agriculture Organization of the United Nations (FAO), Statistics
+            Division, Rome Italy.
+          </p>
+          <p class="wrap">
+            7.&nbsp;Qi, S., Zhang, S., Islam, M. M., El-Sappah, A. H., Zhang,
+            F., & Liang, Y. (2021, October 1). Natural resources resistance to
+            tomato spotted wilt virus (Tswv) in tomato (solanum lycopersicum).
+            International Journal of Molecular Sciences. MDPI.
+            <a href="https://doi.org/10.3390/ijms222010978" target="_blank"
+              >&nbsp;https://doi.org/10.3390/ijms222010978</a
+            >
+          </p>
+          <p class="wrap">
+            8.&nbsp;OERKE, E. (2006). Crop losses to pests. The Journal of
+            Agricultural Science, 144(1), 31-43.
+            <a href="https://doi.org/10.1017/S0021859605005708" target="_blank"
+              >&nbsp;https://doi.org/10.1017/S0021859605005708</a
+            >
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+
+  strong {
+    color: var(--blue-color);
+  }
+
+  .wrap {
+    word-wrap: break-word;
+  }
+</style>

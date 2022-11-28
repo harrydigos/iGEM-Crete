@@ -1,0 +1,374 @@
+---
+import { ASSETS_URL } from "../../static/utils/constants";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="iGEM Crete | Attributions">
+  <Navbar activeNav="team" />
+  <div class="blend"></div>
+  <div data-scroll-container class="container page">
+    <div class="sideBar">
+      <Sidebar
+        items={[
+          {
+            mainPart: { title: "Team Members", id: "part1" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Principal Investigators", id: "part2" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Advisor", id: "part3" },
+            subParts: [],
+          },
+          {
+            mainPart: { title: "Outsourced Help", id: "part4" },
+            subParts: [],
+          },
+        ]}
+      />
+    </div>
+
+    <main>
+      <div class="big-main-title" data-content="Attributions">Attributions</div>
+      <section class="parts-container">
+        <div id="part1" class="part scroll">
+          <h1 class="part-title">Team Members</h1>
+
+          <h3>Sotiris Marinos</h3>
+          <p>
+            Sotiris is the Team Leader and Wet Lab member of iGEM Crete 2022
+            team. Throughout the project he took part in brainstorming sessions,
+            observed the project&rsquo;s process and organized the team's moves.
+            As the Head of Wet Lab for iGEM Crete 2021 team, Sotiris played a
+            crucial role for the project&rsquo;s experiment planning and
+            execution. Lastly, he was in constant contact with team&rsquo;s
+            supervisors to inform them about the project&rsquo;s progress and
+            get both feedback and advice from them to smoothly proceed in the
+            project&rsquo;s completion.
+          </p>
+          <h3>Kiriakos Mavridis</h3>
+          <p>
+            Kiriakos came up with the project idea and performed the
+            experimental design, so it comes to fruition. As the head of the Wet
+            lab, he scheduled the experiments to fit into the time frame and
+            ensured a healthy environment for the coordinated efforts of the wet
+            lab members. He was also in charge of the execution of the
+            experimental procedures as well as literature investigations.
+          </p>
+          <h3>Chrysanthi Ioanna Psarologaki</h3>
+          <p>
+            Chrysianna is a 4th year undergraduate biology student. As the head
+            of Human Practices of this year&rsquo;s team, she ensured that the
+            project was beneficial and responsible to society, while developing
+            a thorough understanding of the factors that would affect the design
+            and application of our diagnostic in the field. Moreover, she
+            promoted the project by representing us in numerous events,
+            organizing educational activities, collaborating with other iGEM
+            teams and reaching out to relevant scientists to help guide our
+            project in the right direction.
+          </p>
+          <h3>George Angelakis</h3>
+          <p>
+            As a member of the iGEM Crete 2021 team as well, George&rsquo;s
+            experience allowed him to aid beyond his assigned role. In addition
+            to fundraising and contacting stakeholders, George aided in
+            promoting the project, editing of media, conducting secondary
+            experiments, running bioinformatics analyses and drafting a solid
+            implementation strategy. Lastly, he actively partook in our
+            team&rsquo;s visit to Thessaloniki for our team&rsquo;s partnership.
+          </p>
+          <h3>Sofia Chatziavraam</h3>
+          <p>
+            3rd year Biology student at the University of Crete. Social Media
+            was her responsibility and her joy all this time. She was always
+            ready to keep the social media world updated with every action and
+            event our team did. Moreover, communication with the other iGEM
+            teams was one of her main priorities in order to ensure the best
+            possible contact with the Community!
+          </p>
+          <h3>Christina Chatzichrysou</h3>
+          <p>
+            Christina is currently enrolled in her 3rd year of biology studies
+            at University of Crete. As a member of the fundraising team, her
+            primary tasks were communicating with potential sponsors, resolving
+            their bureaucratic issues and maintaining a healthy communication
+            with the funding department of the university. Furthermore, her
+            creative ideas contributed in designing social media posts and our
+            team&rsquo;s stickers as well as in organizing the team&rsquo;s
+            events.
+          </p>
+          <h3>Apostolia-Ioli Diamanti</h3>
+          <p>
+            She has just completed her undergraduate studies in the Biology
+            Department at the University of Crete (UoC). Ioli is a member of the
+            Wet lab and her work in the team is focused on the brainstorming
+            sessions and the conduction of the biological experiments. Moreover,
+            she is part of the weekly meetings that aim to update the whole team
+            on the progress of each group and to assign new responsibilities to
+            each member.
+          </p>
+          <h3>Despoina Lazaridou</h3>
+          <p>
+            Despoina is a 3rd-year Biology student at the University of Crete.
+            Throughout the project's execution, Despoina was a member of the wet
+            lab and was in charge of safety. She was involved in the
+            brainstorming process and ensured to acquire the parts needed for
+            the experiments. During team meetings, she was an interface between
+            the wet lab and the rest of the team, and she participated in
+            integrated meetings with specialized academics to improve and solve
+            any problems that arose from laboratory procedures.
+          </p>
+          <h3>Aikaterini Eirini Zacharia</h3>
+
+          <p>
+            4th year undergraduate student of Biology at the University of
+            Crete. Involved in the fundraising team, she was responsible among
+            others for finding potential sponsors and communicating on a monthly
+            basis with them in order to update them for our team&rsquo;s news.
+            Her contribution was focused on the general financial strengthening
+            of the team in different ways and the co-writing of specific parts
+            of the wiki.
+          </p>
+          <h3>Maria Efthymia Banou</h3>
+          <p>
+            4th year biology undergraduate student. As a member of the Human
+            Practices Team Maria ensured that all the goals that the team had
+            set would be met. She played a significant role in the process of
+            organizing educational activities in order to create a bridge
+            between the concept of synthetic biology and the different social
+            groups.Additionally, she contributed in the collaboration&nbsp; with
+            other teams and the participation in activities held by IGEM
+            Community in order for the team to be actively present.
+          </p>
+          <h3>Johnny Petrosian</h3>
+          <p>
+            Johnny is a 4th year undergraduate biology student and a member of
+            the Human Practices team. He consulted researchers to help improve
+            our project and visited schools and the Natural History Museum to
+            educate the local community about our project, the competition and
+            the concept of synthetic biology. In addition, he developed a
+            mini-game to communicate the project in a fun way and wrote an
+            article about our team for the public press.
+          </p>
+          <h3>Isidoros Chatzichysos</h3>
+          <p>
+            Isidoros is now a 4th Computer Science student. He planned and
+            created a lot of the wiki page's components in his capacity as the
+            leader of Dry Lab. He also helped with the team's visual
+            presentation on Instagram and in several other postings. Lastly, he
+            also updated the team's logo, which was also utilized to create
+            promotional stickers.
+          </p>
+          <h3>Babis Digos&nbsp;</h3>
+          <p>
+            Babis is currently enrolled in his 4th year of Computer Science
+            studies. As a member of the dry lab team, he used another javascript
+            framework to arrange and put the team's wiki's logic and structure
+            in place. He also designed the base of the wiki page as well as some
+            social posts. He also made a significant contribution by offering a
+            variety of design suggestions.
+          </p>
+          <h3>Aris Logothetis</h3>
+          <p>
+            Aris has recently become a biologist graduating from University of
+            Crete. He participated in the wet lab team, helping with the
+            experimental design and&nbsp; the troubleshooting. As a member of
+            the wet lab he worked to fulfill the project's goals.He represented
+            the team in various meetings, explaining the aims of the project as
+            well as providing useful help in the fundraising of the team.
+            Finally,he contributed a small part in the integrated human
+            practices process.
+          </p>
+        </div>
+
+        <div id="part2" class="subpart scroll">
+          <h1 class="part-title">Principal Investigators</h1>
+          <h3>Professor Panagiotis Sarris</h3>
+          <p>
+            Our Primary PI is Professor Panagiotis Sarris who for a second year
+            in a row actively supported the team&rsquo;s endeavors in every
+            available way. He graciously provided us with the required equipment
+            and lab space and was always available for any questions or problems
+            we faced along the way. Prof Sarris received his PhD at University
+            of Crete (2004-2009) where he analyzed the roles of bacterial
+            secretory systems during host colonization in the field of Molecular
+            Pathogen-Host Interactions. Starting from 2011 until late 2015 he
+            was a Senior Research Associate at the University of East Anglia and
+            in 2015 he was elected as Associate Professor of Molecular
+            Microbiology and Plant Immunity, at the University of Exeter,
+            (School of Biosciences), where he remains until today as Honorary
+            Professor. In September 2017 he was elected as Principal Researcher
+            at the Institute of Molecular Biology and Biotechnology (IMBB) of
+            Foundation for Research and Technology - Hellas (FORTH), while also
+            serving as an Affiliated Professor of Microbiology in the University
+            of Crete.
+          </p>
+          <h3>Professor Anna Mitraki</h3>
+          <p>
+            Our secondary PI is Prof. Anna Mitraki. Prof Mitraki was of
+            invaluable help along the way helping us navigate the intricate
+            waters of biochemistry that our project entailed. She moreover,
+            through her decades of expertise in matters of administration,
+            significantly helped us organize our efforts. Lastly her keen eye
+            and expertise were primordial to every troubleshooting session we
+            had throughout the year. Prof. Anna Mitraki received her PhD in
+            Biochemistry from Universite de Paris-Sud, Orsay, France in 1986 for
+            her work on enzyme folding, assembly and aggregation while she has
+            worked for 7 years as a Postdoctoral associate and Research
+            Scientist at the Massachusetts Institute of Technology, Cambridge,
+            MA, U.S.A. Since September 2004 she serves as a Professor in the
+            Department of Materials Science and Technology, University of Crete,
+            Greece and is an Affiliated Research Scientist with the Institute
+            for Electronic Structure and Laser, FORTH).
+          </p>
+        </div>
+
+        <div id="part3" class="subpart scroll">
+          <h1 class="part-title">Advisors</h1>
+          <h3>Stavros Skrepetos</h3>
+          <p>
+            Stavros is a M.S.c. student in Material Science at University of
+            Crete. He is currently studying on the fabrication of 3D mechanical
+            metamaterials and nanostructures on a large scale, with applications
+            on tissue and immuno engineering at FORTH/IESL. As a former member
+            of iGEM Crete he was a jack of all trades in the 2022 team. His
+            large area of expertise, combined with his previous experiment was
+            primordial in our team’s journey. Stavros helped us brainstorm our
+            project’s idea, plan out the experiments needed, troubleshoot
+            problems in the wet and dry lab, organize local events in the
+            framework of human practices and reach out to sponsors and various
+            other stakeholders.
+          </p>
+        </div>
+        <div id="part4" class="subpart scroll">
+          <h1 class="part-title">Outsourced Help</h1>
+          <h3>Dr. Christos Christakis</h3>
+          <p>
+            Dr. Christos Christakis is a Post-Doc Researcher at the University
+            of Crete. His expertise in microbiology and ecology was of the
+            utmost importance throughout our team&rsquo;s journey. His valuable
+            feedback since the concept&rsquo;s realization helped a long way in
+            shaping our project as it is today. Moreover, with his ideas,through
+            countless conversations,he helped us grasp and expand upon the true
+            limits of our project.
+          </p>
+          <h3>Mrs. Dimitra Tsakiri</h3>
+          <p>
+            Mrs Dimitra Tsakiri is a PhD student at the University of Crete,
+            Department of Biology. She was of great help in helping us design
+            various needed primers and was an important addition to many
+            brainstorming and troubleshooting sessions.
+          </p>
+          <h3>Mr. Kostas Kotsaridis</h3>
+          <p>
+            Mr Kostas Kotsaridis is a PhD student at the University of Crete,
+            Department of Biology. His expertise in protein folding and
+            prediction has been very impactful on our target molecules. Every
+            aspect of our bioinformatics work has stemmed, in one way or
+            another, by his guidance.
+          </p>
+          <h3>Dr. Vassiliki A. Michalopoulou</h3>
+          <p>
+            Dr. Vassiliki Michalopoulou is a Post-Doc Researcher at the
+            University of Crete. Her guidance on plant handling and her
+            troubleshooting efficiency&nbsp; greatly helped our team throughout
+            the year.
+          </p>
+          <h3>Mx. George Nistikakis</h3>
+          <p>
+            George Nistikakis is a PhD student in professor Mitraki&rsquo;s lab.
+            Their PhD revolves around rational design of bio-inspired protein
+            and peptide materials based on self-assembling natural systems.
+            Their thesis subject combined with their knowledge in protein
+            folding and assembly as well as their use as biomaterials in
+            biomedical applications was of great help regarding how the test kit
+            would actually look and how the detection strip would work.
+          </p>
+          <h3>Mrs. Maria-Theodora Vitiadou</h3>
+          <p>
+            Mrs. Maria Vitiadou was iGEM Crete&rsquo;s former leader and, as
+            such, she was a great mentor of us along the way. Her experience
+            gained last year, combined with her biological knowledge was a
+            valuable tool for us throughout the year.
+          </p>
+          <h3>Professor Pavlos Pavlidis</h3>
+          <p>
+            Prof. Pavlos Pavlidis, via his position at the Institute of Computer
+            Science (ICS), FORTH, was of great assistance in our team&rsquo;s
+            efforts to outsource our work to the general public.
+          </p>
+          <h3>Professor Dina Lika</h3>
+          <p>
+            Dina Lika is an Associate Professor in the Department of Biology of
+            the University of Crete. She got her Ph.&thinsp;D. from the
+            University of Tennessee, Knoxville. She was of vital importance in
+            navigating through every bureaucratic intricacy involved with our
+            project.
+          </p>
+          <h3>Mrs. Tzovanna Vlataki</h3>
+          <p>
+            Tzovanna Vlataki is one of the secretaries of the Department of
+            Biology of the University of Crete and her help throughout the year
+            was truly invaluable. She was an everyday liaison between the
+            administration and our team and her irreplaceable assistance helped
+            us go a long way.
+          </p>
+          <h3>Mr. Nikos Angelakis</h3>
+          <p>
+            Nikos Angelakis is a journalist, public media expert and local
+            politician that provided valuable insight on how to approach local
+            communities and media to make our project known to the general
+            public.
+          </p>
+          <h3>Mrs. Dorothea Evmorfidou</h3>
+          <p>
+            Mrs Dorothea Evmorfidou is a PhD student in the Aristotle University
+            of Thessaloniki and is also the instructor of iGEM Thessaloniki. She
+            was extremely helpful during our team&rsquo;s visit to Thessaloniki
+            in the frame of our partnership&rsquo;s realization.
+          </p>
+          <h3>Mr. Spiros Daoulas</h3>
+          <p>
+            Mr. Spiros Daoulas, a financial executive in the private sector, was
+            very keen to help us locate and talk to experts on the field of One
+            Health and Medicine
+          </p>
+          <h3>Mr. Dimitrios Plantzounakis</h3>
+          <p>
+            Mr. Dimitrios Plantzounakis obtains an active and energetic position
+            in land cultivation and was very happy to share his thoughts on the
+            project, as well as to help us communicate with other agriculturists
+            and virologists.
+          </p>
+          <h3>Mrs. Angela Christaki</h3>
+          <p>
+            Mrs. Angela Christaki is a junior high school principal, an english
+            teacher at the Hellenic Mediterranean University and an academic
+            author. She was very helpful and supportive during our contact and
+            the web meeting with her school.
+          </p>
+          <h3>Mrs Papadaki Maria</h3>
+          <p>
+            Mrs Papadaki Maria, the biology teacher of the Chandras junior high
+            school expressed her vivid interest in our research, posed some
+            questions and invited us to present the kit to her students.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  @import "../../static/styles/text-page.css";
+  h3 {
+    color: var(--blue-color);
+  }
+</style>
